@@ -1,0 +1,20 @@
+/* Preloader.css */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  z-index: 99999; /* Ensure it's above other content */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: inherit; /* Align towards the top */
+}
+
+.animated-image {
+  border-radius: 50%; /* Optional: makes the image circular */
+  object-fit: contain; /* Use 'contain' instead of 'cover' to ensure the image fits within the given dimensions */
+  width: 420px; /* Set a specific width */
+  height: auto; /* Maintain aspect ratio */
+}
