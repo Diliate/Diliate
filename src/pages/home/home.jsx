@@ -74,7 +74,7 @@ function Home() {
 
                     <div className="banner-image" style={{ overflow: 'hidden' }}>
                         <motion.img
-                            src='./Blue Clay Hovering Geometry Pack.png'
+                            src='./static/images/Blue Clay Hovering Geometry Pack.png'
                             className="monitor"
                             alt=""
                             whileHover={{ scale: 1, rotate: 180 }}
@@ -96,7 +96,7 @@ function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, ease: "easeOut" }}>
-                    <img className="about-image" src='./s2.jpg' loading="lazy" />
+                    <img className="about-image" src='./static/images/s2.jpg' loading="lazy" />
                 </motion.div>
                 <div className="about-container">
                     <motion.div
