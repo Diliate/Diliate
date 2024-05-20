@@ -1,39 +1,17 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Button from "../../components/Button/Button";
 import soboImage from '../../assets/homeimages/sobo.png';
-import { FiArrowUpRight } from "react-icons/fi";
-import monitor from "../../assets/homeimages/Pattern (3).png"
-import check from "../../assets/homeimages/Pattern (1).png"
-import bullseye from "../../assets/homeimages/Pattern.png"
-import star from "../../assets/homeimages/star.png"
-import atsymbol from "../../assets/homeimages/atsymbol.png"
 import abouticon from "../../assets/homeimages/abouticon.png"
 import abouticon2 from "../../assets/homeimages/abouticon2.png"
 import ladder from "../../assets/homeimages/ladder.png"
 import charts from "../../assets/homeimages/charts.png"
 import graphics from "../../assets/homeimages/Graphics.png"
 import notification from "../../assets/homeimages/notification.png"
-import redicon from "../../assets/homeimages/red icon.png"
-import keyboard from "../../assets/homeimages/keyboard.jpg"
-import dollars from "../../assets/homeimages/dollars.png"
-import coin from "../../assets/homeimages/coin.png"
-import settings from "../../assets/homeimages/settings.png"
-import startup from "../../assets/services-images/Startup.png"
-import greencircle from "../../assets/homeimages/greencircle.png"
-import increasetraffic from "../../assets/homeimages/increase traffic.jpg"
-import smallbusinesses from "../../assets/homeimages/small businesses.jpg"
-import morearticles from "../../assets/homeimages/more articles.png"
 import Nav from "../../components/navigation/navigation"
-import { ServicesHeading } from "../../components/services-component/services-container"
 import ServicesContainer from "../../components/services-component/services-container"
 import Header from "../../components/header/header"
-import Accordion from "../../components/accordion/accordion"
 import "./home.css"
 import Footer from "../../components/footer/footer";
-import Stats from "../../components/stats/stats";
-import tailwindConfig from "../../../tailwind.config";
-
 import { useNavigate } from 'react-router-dom';
 
 
@@ -96,7 +74,7 @@ function Home() {
 
                     <div className="banner-image" style={{ overflow: 'hidden' }}>
                         <motion.img
-                            src='src/assets/homeimages/Blue Clay Hovering Geometry Pack.png'
+                            src='./Blue Clay Hovering Geometry Pack.png'
                             className="monitor"
                             alt=""
                             whileHover={{ scale: 1, rotate: 180 }}
@@ -118,7 +96,7 @@ function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, ease: "easeOut" }}>
-                    <img className="about-image" src='src\assets\services-images\s2.jpg' loading="lazy" />
+                    <img className="about-image" src='./s2.jpg' loading="lazy" />
                 </motion.div>
                 <div className="about-container">
                     <motion.div
