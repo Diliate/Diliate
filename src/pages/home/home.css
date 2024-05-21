@@ -605,3 +605,9 @@ left: 1em;
 
 
 
+@media (max-width: 768px) {
+    .banner {
+         width: 90%; /* Full width on small screens */
+         margin-top: -300px; /* Adjust margin as needed */
+     }
+ }
