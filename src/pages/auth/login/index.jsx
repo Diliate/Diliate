@@ -65,13 +65,6 @@ const Login = () => {
                             required
                         />
 
-
-
-
-
-
-
-
                         <input
                             type="password"
                             placeholder="Password"

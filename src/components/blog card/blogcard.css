@@ -47,9 +47,9 @@
     line-height: 31px;
 }
 
-/* .menu-wrapper{
+ .menu-wrapper{
     height: 0;
-} */
+} 
 @media (min-width:480px){
     .blog-card-meta{
         display: flex;
