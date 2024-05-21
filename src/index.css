@@ -10,7 +10,7 @@ body{
     font-family: 'Nunito',sans-serif;
     width: 100%;
     margin: 0px;
-  overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 
@@ -29,4 +29,22 @@ body{
   animation-name: fadeIn;
   animation-duration: 2s; /* Adjust duration as needed */
   animation-fill-mode: forwards;
+}
+/* Global styles */
+
+
+/* index.css or global.css */
+.overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* High z-index to ensure it's above other content */
+}
+
+.visible {
+  display: block; /* Make the overlay visible */
 }

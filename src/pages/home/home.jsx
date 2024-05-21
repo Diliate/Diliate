@@ -21,21 +21,6 @@ import { useNavigate } from 'react-router-dom';
 // User Experience: It improves the user experience by making the content more digestible and easier to navigate. Users can focus on one topic at a time, reducing cognitive load.
 
 
-const Accordionitems = [
-    {
-        header: "Online Media Management", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae\
-    laborum facilis hic alias dolorum repellendus\
-    obcaecati dolorem eligendi, saepe fugit, mollitia perspiciatis sit culpa?"},
-
-    {
-        header: "Experential Marketing", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae\
-    laborum facilis hic alias dolorum repellendus\
-    obcaecati dolorem eligendi, saepe fugit, mollitia perspiciatis sit culpa?"},
-
-    {
-        header: "Email Marketing", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae\
-    laborum facilis hic alias dolorum repellendus\
-    obcaecati dolorem eligendi, saepe fugit, mollitia perspiciatis sit culpa?"}]
 
 /* The map Function: This is a method available on arrays in JavaScript. It's used to create a new array by applying a function to each element of the original array. This is particularly useful when you want to transform an array of data into a different format. */
 /* Why Use map in React?: In React, map is often used to render lists of components. Each item in the array can represent data for a component, and map allows you to iterate over this data to create a list of components. This is a common pattern in React for displaying dynamic data, such as a list of users, products, or any other collection of items. */
@@ -62,34 +47,27 @@ function Home() {
                         </h1>
                         <p style={{ margin: '0px' }} className='dummy-text'>We understand our customer's needs and hence our work approach & systems
                             will tend to know many things about the project result.</p>
+
                         <div className="banner-buttons">
-                            <Link to="/login" className="banner-getstarted">Get Started</Link>
+
+                            <Link to="/login" className="banner-services">Get Started</Link>
                             <Link to="/services" className="banner-services">Services</Link>
                         </div>
 
-
                     </div>
-
-
-
                     <div className="banner-image" style={{ overflow: 'hidden' }}>
                         <motion.img
                             src='./static/images/Blue Clay Hovering Geometry Pack.png'
                             className="monitor"
                             alt=""
-                            whileHover={{ scale: 1, rotate: 180 }}
+                            whileHover={{ scale: 1.1, rotate: 180 }}
                             transition={{ duration: 1.5 }}
-                            style={{ willChange: 'transform' }} // Hint to browser about transformation
                         />
+
                     </div>
-
-
                 </div>
-
             </header>
-
             <ServicesContainer />
-
             <div className="home-about">
                 <motion.div className="about-image-container"
                     initial={{ opacity: 0, y: 110 }}
@@ -118,8 +96,6 @@ function Home() {
                         <div style={{ width: '100%', border: '1px solid #cfcfcf' }}></div>
                         <p className="about-text">We're a leading digital services provider, dedicated to enhancing businesses through innovative technology solutions. Our expertise spans across web development, SEO optimization, and social media marketing, designed to elevate your online presence and drive growth.</p>
                     </motion.div>
-
-
                     <div className="about-point">
 
                         <motion.div className="points"
@@ -145,11 +121,9 @@ function Home() {
                                 <p className="point-text">Guided by industry leaders, your success is our passion.</p>
                             </div>
                         </motion.div>
-
                     </div>
                 </div>
             </div>
-
             <div className="home-process">
                 <Header spantext="PROCESS" image={ladder} content="Streamlined Digital Process" light={false} />
                 <div className="illustrations">
@@ -188,9 +162,6 @@ function Home() {
                     </motion.div>
                 </div>
             </div>
-
-
-
             <div className="text-[#fff] pb-[2rem] lg:w-[90%] max-w-[1200px] m-auto px-6 md:px-10 mt-[3rem]">
                 <div className="relative">
                     <motion.img
@@ -240,10 +211,6 @@ function Home() {
                             >
                                 Start Now
                             </button>
-
-
-
-
 
                         </motion.div>
                     </div>

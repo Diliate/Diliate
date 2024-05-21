@@ -16,8 +16,8 @@ const Blog = React.lazy(() => import("./pages/blog/blog"));
 const Services = React.lazy(() => import("./pages/servicesPage/services"));
 
 function App() {
-
   const [isLoading, setIsLoading] = useState(true);
+  const [isContactUsOpen, setIsContactUsOpen] = useState(false); // New state for tracking "Contact Us" visibility
 
   useEffect(() => {
     // Simulate loading time
@@ -27,32 +27,35 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-  
 
   logEvent(analytics, 'notification_received');
+
+  // Function to toggle "Contact Us" visibility
+  const toggleContactUsVisibility = () => {
+    setIsContactUsOpen(!isContactUsOpen);
+  };
 
   return (
     <>
       {isLoading? (
         <div id="root" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
           <Preloader />
-          <MetaPixel/>
+          <MetaPixel />
         </div>
       ) : (
         <div id="root" style={{ display: 'block' }}>
-            <Suspense fallback={<Preloader />}>
+          <Suspense fallback={<Preloader />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/Aboutus" element={<AboutUs />} />
-              <Route path="/contactus" element={<ContactUs />} />
+              <Route path="/contactus" element={<ContactUs isOpen={isContactUsOpen} onClose={toggleContactUsVisibility} />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/services" element={<Services />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/book" element={<Book />} />
             </Routes>
-            </Suspense>
-
+          </Suspense>
         </div>
       )}
     </>

@@ -1,3 +1,5 @@
+
+
 .services-cta{
     box-sizing: border-box;
     position: relative;
@@ -9,6 +11,17 @@
     border-radius: 15px;
     background: linear-gradient(111.05deg, #E9F7FF 9.66%, #FFDBD5 57.52%, #FFF3CA 103.42%);
 }
+
+
+
+body {
+    overflow-y: hidden;
+}
+
+.services-cta {
+    overflow-y: hidden;
+}
+
 
 .services-cta-title,.services-cta-buttons{
     margin: auto;

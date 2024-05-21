@@ -1,10 +1,7 @@
 import React, { useState } from "react"
 
 import file from "../../assets/blogimages/Icon (1).png"
-import socials from "../../assets/blogimages/socials 2.jpg"
 import socials3 from "../../assets/blogimages/socials.jpg"
-import boxes from "../../assets/blogimages/boxes.jpg"
-import brain from "../../assets/blogimages/brain.jpg"
 import Nav from "../../components/navigation/navigation"
 import Banner from "../../components/banner/banner"
 import Header from "../../components/header/header"

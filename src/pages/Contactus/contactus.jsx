@@ -4,14 +4,12 @@ import handshake from "../../assets/aboutimages/handshake.png";
 import phone from "../../assets/aboutimages/phone 2.png";
 import location from "../../assets/aboutimages/location.png";
 import envelope from "../../assets/aboutimages/envelope 2.png";
-import faq from "../../assets/aboutimages/faq.png";
 import Nav from "../../components/navigation/navigation";
 import Banner from "../../components/banner/banner";
 import Header from "../../components/header/header";
 import ContactBox from "../../components/contactbox/contactbox";
 import Footer from "../../components/footer/footer";
 import "./contactus.css";
-import Accordion from "../../components/accordion/accordion";
 import { db } from "../../firebase/firebase";
 import { addDoc, collection } from "firebase/firestore";
 

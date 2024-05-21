@@ -15,7 +15,7 @@ const MyComponent = () => {
       if (currentIndex === message.length) {
         clearInterval(intervalId);
       }
-    }, 100); // Adjust typing speed here (in milliseconds)
+    }, 150); // Adjust typing speed here (in milliseconds)
 
     return () => {
       clearInterval(intervalId); // Clean up the interval on component unmount
