@@ -15,7 +15,7 @@ const MyComponent = () => {
       if (currentIndex === message.length) {
         clearInterval(intervalId);
       }
-    }, 150); // Adjust typing speed here (in milliseconds)
+    }, 300); // Adjust typing speed here (in milliseconds)
 
     return () => {
       clearInterval(intervalId); // Clean up the interval on component unmount
@@ -23,7 +23,7 @@ const MyComponent = () => {
   }, []);
 
   return (
-    <div id="preloader" className="preloader" style={{ backgroundColor: '#fff', position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div id="preloader" className="preloader" style={{ backgroundColor: '#fff', position: 'fixed', top: 10, left: 0, width: '100vw', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
    <motion.img
   src={easyImage}
   alt="Easy"
