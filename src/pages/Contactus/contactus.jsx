@@ -23,7 +23,7 @@ function ContactUs() {
     });
 
     const [isSubmitted, setIsSubmitted] = useState(false); // State to track form submission
-    const [submissionAttempted, setSubmissionAttempted] = useState(false); // New state to track submission attempts
+    const [setSubmissionAttempted] = useState(false); // New state to track submission attempts
 
     const handleChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value });

@@ -31,7 +31,6 @@ body{
 /* Responsive design adjustments */
 @media (max-width: 768px) {
  .container {
-    padding: 10px;
     overflow-y: hidden;
     overflow-x: auto;
   }
