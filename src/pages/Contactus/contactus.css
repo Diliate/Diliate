@@ -14,7 +14,7 @@ html, body {
 
 /* Specific Adjustments for iOS Devices */
 @supports (-webkit-appearance: none) {
-    html, body {
+     body {
         overflow-x: hidden; /* Additional layer of protection for iOS */
     }
 }
