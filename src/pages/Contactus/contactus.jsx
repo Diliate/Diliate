@@ -63,7 +63,7 @@ function ContactUs() {
                 <div className="contactus-cards">
                     <ContactBox image={envelope} buttontext="Contact" title="Email" text="Info@diliate.com" />
                     <ContactBox image={phone} buttontext="Call" title="Phone" text="7982169989" />
-                    <ContactBox image={location} buttontext="Office" title="Location" text="FCA – 2104, SGM Nagar Faridabad, Haryana, 121001" />
+                    <ContactBox image={location} buttontext="Office" title="Location" text=" Faridabad, Haryana, 121001" />
                 </div>
             </div>
             <motion.div className="contactus-form"

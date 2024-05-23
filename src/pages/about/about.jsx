@@ -1,30 +1,8 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
-
-import desktop from "../../assets/aboutimages/desktop2.jpg"
-import atsymbol from "../../assets/homeimages/atsymbol.png"
-import bullseye from "../../assets/homeimages/Pattern.png"
-import megaphone from "../../assets/services-images/Megaphone.png"
-import handshake from "../../assets/aboutimages/handshake.png"
-import america from "../../assets/aboutimages/america.png"
-import canada from "../../assets/aboutimages/canada.png"
-import person1 from "../../assets/aboutimages/person1.jpg"
-import person2 from "../../assets/aboutimages/person2.jpg"
-import person3 from "../../assets/aboutimages/person3.jpg"
-import office from "../../assets/aboutimages/office icon.png"
-import verified from "../../assets/aboutimages/verified.png"
-import blue from "../../assets/services-images/Vector (1).png"
 import Nav from "../../components/navigation/navigation"
 import Banner from "../../components/banner/banner"
-import Header from "../../components/header/header"
-import Stats from "../../components/stats/stats"
-import TeamCard from "../../components/teamcard/teamcard"
-import Office from "../../components/office/office"
-import { ServicesHeading } from "../../components/services-component/services-container"
 import Footer from "../../components/footer/footer"
 import "./about.css"
-import CarouselContainer from "../../components/carousel/carousel"
 
 function AboutUs() {
     return (
@@ -106,7 +84,7 @@ function AboutUs() {
                 
                 <h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-white">Office</h2>
                 <p class="mt-2 text-gray-500 dark:text-gray-400">Come say hello at our office HQ.</p>
-                <p class="mt-2 text-blue-500 dark:text-blue-400">FCA – 2104, 25 Feet Road, Street- 16, Block- B, SGM Nagar
+                <p class="mt-2 text-blue-500 dark:text-blue-400">
                  Faridabad, Haryana, 121001</p>
             </div>
             <div class="flex flex-col items-center justify-center text-center">

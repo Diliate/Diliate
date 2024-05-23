@@ -56,7 +56,7 @@ const Footer = () => {
                             <img src={location} alt="location icon" loading="lazy"/>
                             <h3>Location</h3>
                         </div>
-                        <p className="office-address">FCA – 2104, 25 Feet Road, Street- 16, Block- B, SGM Nagar
+                        <p className="office-address"> 
                          Faridabad, Haryana, 121001</p>
                         <p>Location</p>
                     </div>
