@@ -16,6 +16,7 @@ html, body {
 @supports (-webkit-appearance: none) {
      body {
         overflow-x: hidden; /* Additional layer of protection for iOS */
+        overflow-y: hidden;
     }
 }
 
@@ -222,6 +223,7 @@ html, body {
 @media (min-width: 1260px) {
    .contactus-contact-container {
         margin-top: 140px;
+        overflow: hidden;
     }
    .contactus-cards {
         grid-template-columns: 1fr 1fr 1fr;
@@ -237,3 +239,11 @@ html, body {
         margin: 140px auto;
     }
 }
+
+
+@media (max-width: 600px) {
+    .container {
+         overflow-x: hidden;
+     }
+ }
+ 

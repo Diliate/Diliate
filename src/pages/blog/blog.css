@@ -1,5 +1,6 @@
 .blog-section{
     margin: 80px 0;
+    overflow: hidden;
 }
 
 .services-cta {
@@ -9,6 +10,7 @@
 
 .services-cta-title,.services-cta-buttons{
     margin: auto;
+    overflow: hidden;
 }
 
 body {
@@ -160,3 +162,5 @@ body {
         font-size: 25px;
     }
 }
+
+

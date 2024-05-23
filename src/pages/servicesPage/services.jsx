@@ -9,7 +9,7 @@ import Banner from "../../components/banner/banner"
 import Nav from "../../components/navigation/navigation"
 import ServicesContainer from "../../components/services-component/services-container"
 import Footer from "../../components/footer/footer"
-import "./services.css"
+import"./services.css"
 import { Link } from "react-router-dom"
 
 function Services(){

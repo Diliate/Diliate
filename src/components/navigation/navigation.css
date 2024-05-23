@@ -5,6 +5,31 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Apply similar overflow control to any container that might expand beyond the viewport */
+.container {
+    overflow-x: hidden;
+}
+
+
+
+
+
 .navigation-small{
     position: relative;
     display: flex;
@@ -83,36 +108,13 @@ html, body {
     transform: translateY(-440px);
 }
 
-.get-started-button {
-    position: relative;
-    border-radius: 8px;
-    transition: background-color 0.3s ease-out, color 0.3s ease-out;
-    display: inline-block; /* Ensures the button behaves as a block element but can be aligned inline */
-    overflow: hidden; /* Ensures the pseudo-element does not overflow the button */
-}
-
-.get-started-button::before {
-    content: "";
-    display: block;
-    padding-top: 0%; /* This creates a square container */
-    width: 60px; /* Directly set the width */
-    height: 0px; /* Directly set the height */
-    box-sizing: border-box;
-}
-
-.get-started-button .button-text {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
 
 
 
 
-.get-started-button:hover{
-    background-color: var(--primary-01);
-    color: var(--secondary-01);
-}
+
+
+
 
 .menu-large {
     display: none;
@@ -145,6 +147,7 @@ a:hover{
     }
     .menu-wrapper{
         height: 480px;
+        overflow: hidden;;
     }
 }
 
@@ -158,6 +161,7 @@ a:hover{
 @media (min-width:990px) {
     .menu-button,.menu,.menu-wrapper {
         display: none;
+        overflow: hidden;
     }
     .navigation-small {
         width: 90%;

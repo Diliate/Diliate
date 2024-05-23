@@ -34,6 +34,7 @@ body {
     font-size: 30px;
     font-weight: 800;
     text-align: center;
+    overflow: hidden;
 }
 
 .services-cta-buttons {
@@ -43,6 +44,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow: hidden;
 }
 
 .services-cta-getintouch a,
@@ -94,6 +96,7 @@ body {
         margin-top: 60px;
         flex-direction: row;
         justify-content: center;
+        overflow: hidden;
     }
     .services-cta-getintouch a,
     .services-cta-getstarted a {
@@ -122,6 +125,7 @@ body {
         border-radius: 30px;
         padding: 60px 40px;
         margin: 100px auto;
+        overflow: hidden;
     }
     .services-cta-title {
         width: 600px;
@@ -143,9 +147,8 @@ body {
         background-image: url("../../assets/homeimages/grid.png");
         background-size: 70%;
         background-repeat: no-repeat;
-
-
-        background-position: 5% 120%;
+        overflow: hidden;
+        background-position: 55% 120%;
     }
     .cta-rocket {
         width: 27%;
@@ -219,3 +222,11 @@ body {
         right: 4%;
     }
 }
+
+
+@media (max-width: 600px) {
+    .container {
+         overflow-x: hidden;
+     }
+ }
+ 
