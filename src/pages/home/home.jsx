@@ -89,7 +89,7 @@ function Home() {
                             </div>
                             <div className="about-title">
                                 <div></div>
-                                <p className="about-info"><span></span>ABOUT US</p>
+                                <p className="about-info"><span></span></p>
                                 <h2>Your Trusted Digital Partner</h2>
                             </div>
                         </div>

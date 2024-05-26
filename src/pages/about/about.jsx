@@ -55,8 +55,7 @@ function AboutUs() {
       <div class="sm:max-w-lg text-center">
         <h2 class="text-3xl leading-none md:text-[45px] font-bold mb-4">Customer Reviews</h2>
         <p class="opacity-50 mb-0">
-            <p class="opacity-50 mb-0">From there give dominion, lights doesn't good all rule let open, appear our beast second bearing.</p>
-            </p>
+        What you plant now, you will harvest later        </p>
       </div>
     </div>
 
@@ -70,16 +69,9 @@ function AboutUs() {
             width="120"
           />
           <div class="mt-4">
-            <h4 class="text-2xl font-medium mb-1">Akay joel</h4>
-            <p class="mb-6">
-              <span class="fas fa-star text-yellow-500"></span>
-              <span class="fas fa-star text-yellow-500"></span>
-              <span class="fas fa-star text-yellow-500"></span>
-              <span class="fas fa-star-half-alt text-yellow-500"></span>
-              <span class="fas fa-star text-yellow-200 dark:text-opacity-20"></span>
-            </p>
+            <h4 class="text-2xl font-medium mb-1">Akay Joel</h4>
             <p class="opacity-50 mb-0">
-            <p class="opacity-50 mb-0">With Diliate, our online presence flourished! Meaningful connections, impressive outcomes. Thrilled!</p>
+              With Diliate, our online presence flourished Meaningful connections, impressive outcomes. Thrilled!
             </p>
           </div>
         </div>
@@ -94,14 +86,9 @@ function AboutUs() {
           />
           <div class="mt-4">
             <h4 class="text-2xl font-medium mb-1">Raima Ray</h4>
-            <p class="mb-6">
-              <span class="fas fa-star text-yellow-500"></span>
-              <span class="fas fa-star text-yellow-500"></span>
-              <span class="fas fa-star text-yellow-500"></span>
-              <span class="fas fa-star-half-alt text-yellow-500"></span>
-              <span class="fas fa-star text-yellow-200 dark:text-opacity-20"></span>
+            <p class="opacity-50 mb-0">
+              Diliate's digital expertise transformed our business Innovative strategies, tangible results. Highly recommend!
             </p>
-            <p class="opacity-50 mb-0">Diliate's digital expertise transformed our business! Innovative strategies, tangible results. Highly recommend!</p>
           </div>
         </div>
       </div>
@@ -114,22 +101,17 @@ function AboutUs() {
             width="120"
           />
           <div class="mt-4">
-            <h4 class="text-2xl font-medium mb-1">Shamail micheal</h4>
-            <p class="mb-6">
-              <span class="fas fa-star text-yellow-500"></span>
-              <span class="fas fa-star text-yellow-500"></span>
-              <span class="fas fa-star text-yellow-500"></span>
-              <span class="fas fa-star-half-alt text-yellow-500"></span>
-              <span class="fas fa-star text-yellow-200 dark:text-opacity-20"></span>
+            <h4 class="text-2xl font-medium mb-1">Shamail Micheal</h4>
+            <p class="opacity-50 mb-0">
+              Choosing Diliate for our digital marketing needs was transformative. Their innovative strategies propelled our business forward, cultivating our online presence and fostering meaningful connections. We're thrilled with the outcomes!
             </p>
-            <p class="opacity-50 mb-0">Choosing Diliate for our digital marketing needs was transformative. Their innovative strategies propelled our business forward, cultivating our online presence and fostering meaningful connections. We're thrilled with the outcomes!</p>
-
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
             <Footer />
         </div>

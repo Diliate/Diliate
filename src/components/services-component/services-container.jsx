@@ -2,13 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./services-container.css"
-import mobilephone from "../../assets/services-images/mobilephone.png"
-import Startup from "../../assets/services-images/Startup.png"
-import Megaphone from "../../assets/services-images/Megaphone.png"
-import marketing from "../../assets/services-images/Marketing Plan.png"
-import funnel from "../../assets/services-images/funnel.png"
-import board from "../../assets/services-images/board.png"
-import settings from "../../assets/services-images/settings.png"
+
 import ServicesGrid from "../../components/services-component/services-grid"
 import papa from '../../assets/services-images/papa.jpg';
 import e4 from '../../assets/services-images/e4.jpg';
@@ -28,7 +22,7 @@ const ServicesContainer = ()=>{
         <div className="home-services">
             <div className="wrapper">
                 
-                <ServicesHeading titletext="High-impact digital services to take your business to the next level" spantext="SERVICES"
+                <ServicesHeading titletext="High-impact digital services to take your business to the next level" spantext=""
                  buttontext="Our Services" light={true}/>
                 <div className="services-content">
                 <ServicesGrid 
