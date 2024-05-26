@@ -1,94 +1,101 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import newImage from "../../assets/homeimages/new.png";
-import megaphone from "../../assets/homeimages/megaphonefooter.png";
-import utilities from "../../assets/homeimages/utilities.png";
-import phone from "../../assets/homeimages/phone.png";
-import location from "../../assets/homeimages/location.png";
-import follows from "../../assets/homeimages/follows.png";
-import pages from "../../assets/homeimages/pages.png";
-import "./footer.css";
+import newImage from '../../assets/homeimages/new.png';
+import { FaLinkedinIn, FaTwitter, FaWhatsapp, FaPinterest } from "react-icons/fa"; // Importing icons
 
 const Footer = () => {
     return (
-        <div className="footer-container">
-            <motion.div className="subscribe-box"
-                initial={{opacity:0,y:110}}
-                whileInView={{opacity:1,y:0}}
-                viewport={{once:true}}
-                transition={{duration:0.7,ease:"easeOut"}}>
-                <div className="footer-logo">
-                    <img src={newImage} loading="lazy" alt="company logo"/>
-                </div>
-                <div className="footer-megaphone">
-                    <img src={megaphone} loading="lazy" alt="megaphone icon"/>
-                </div>
-                <motion.div className="follows"
-                        initial={{opacity:0,y:110}}
-                        whileInView={{opacity:1,y:0}}
-                        viewport={{once:true}}
-                        transition={{duration:0.7,ease:"easeOut"}}>
-                        <div className="section-header">
-                            <img src={follows} alt="follows" loading="lazy"/>
-                            <h3>Follows</h3>
-                        </div>
-                        <div className="items-list">
-                            <Link to="https://x.com/Diliate_Digital?t=kWvQUOdmLBTTdH2gKq0rKQ&s=09">Twitter</Link>
-                            <Link to="https://www.instagram.com/marketingdiliate">Instagram</Link>
-                            <Link to="https://www.linkedin.com/in/marketing-diliate-a7146b306/">Linkedin</Link>
-                            <Link to="https://in.pinterest.com/diliate38/">Pintrest</Link>
+        <footer className="bg-[#1A1D2B]">
+            <div className="container mx-auto p-0.xl md:p-0 xl:px-0">
+                <div className="mx-auto max-w-7xl px-6 pb-2 pt-16">
+                    <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+                        {/* First Column */}
+                        <div className="space-y-4 pt-1">
+                            <img
+                                src={newImage}
+                                alt="New Image"
+                                className="w-40 h-24 rounded-full object-cover"
+                            />
+                            <div className="max-w-md pr-16 text-md text-gray-200">
+                                Focus on a digital marketing niche to elevate your agency. Tailor services for industry-specific needs, apply deep expertise, and drive growth. Specialization sets you apart, ensuring client satisfaction.
+                            </div>
+                            <div className="flex space-x-2">
+                                {/* LinkedIn Icon */}
+                                <a href="https://www.linkedin.com/in/example" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-200">
+                                    <span className="sr-only">LinkedIn</span>
+                                    <FaLinkedinIn size="24" />
+                                </a>
+
+                                {/* Twitter Icon */}
+                                <a href="https://twitter.com/example" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-200">
+                                    <span className="sr-only">Twitter</span>
+                                    <FaTwitter size="24" />
+                                </a>
+
+                                {/* WhatsApp Icon */}
+                                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-200">
+                                    <span className="sr-only">WhatsApp</span>
+                                    <FaWhatsapp size="24" />
+                                </a>
+
+                                {/* Pinterest Icon */}
+                                <a href="https://www.pinterest.com/example/" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-200">
+                                    <span className="sr-only">Pinterest</span>
+                                    <FaPinterest size="24" />
+                                </a>
+                            </div>
+
+
 
                         </div>
-                    </motion.div>
 
-                
-            </motion.div>
-            <div className="footer-content">
-                <motion.div className="contact-info"
-                    initial={{opacity:0,y:110}}
-                    whileInView={{opacity:1,y:0}}
-                    viewport={{once:true}}
-                    transition={{duration:0.7,ease:"easeOut"}}>
-                   
-                    <div className="address">
-                        <div className="address-header">
-                            <img src={location} alt="location icon" loading="lazy"/>
-                            <h3>Location</h3>
+                        {/* Second Column */}
+                        <div className="mt-16 grid grid-cols-2 gap-2 xl:col-span-2 xl:mt-0 pt-11">
+                            <div className="md:grid md:grid-cols-2 md:gap-8">
+                                <div>
+                                    <h3 className="text-md font-semibold leading-6 text-white">Our Services</h3>
+                                    <ul role="list" className="mt-6 space-y-4">
+                                        <li>
+                                            <a href="" className="text-md leading-6 text-gray-300 hover:text-gray-50">Digital Marketing</a>
+                                        </li>
+                                        <li>
+                                            <a href="" className="text-md leading-6 text-gray-300 hover:text-gray-50">Web Development</a>
+                                        </li>
+                                        <li>
+                                            <a href="" className="text-md leading-6 text-gray-300 hover:text-gray-50">SEO Optimization</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {/* Third Column */}
+                            <div className="md:grid md:grid-cols-2 md:gap-8">
+                                {/* Company Section */}
+                                <div className="ml-18">
+                                    <h3 className="text-md font-semibold leading-6 text-white">Company</h3>
+                                    <ul role="list" className="mt-6 space-y-4">
+                                        <li>
+                                            <a href="/Aboutus" className="text-md leading-6 text-gray-300 hover:text-gray-50">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="/services" className="text-md leading-6 text-gray-300 hover:text-gray-50">Service</a>
+                                        </li>
+                                        <li>
+                                            <a href="/contactus" className="text-md leading-6 text-gray-300 hover:text-gray-50">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <p className="office-address"> 
-                         Faridabad, Haryana, 121001</p>
-                        <p>Location</p>
                     </div>
-                </motion.div>
-                <div className="features">
-                    <motion.div className="pages"
-                        initial={{opacity:0,y:110}}
-                        whileInView={{opacity:1,y:0}}
-                        viewport={{once:true}}
-                        transition={{duration:0.7,ease:"easeOut"}}>
-                        <div className="section-header">
-                            <img src={pages} alt="pages icon" loading="lazy"/>
-                            <h3>Pages</h3>
+                    {/* Copyright Section */}
+                    <div class="mt-4 border-t border-gray-400/30 pt-4 sm:mt-12 lg:mt-16">
+                        <div class="text-sm text-center text-white mb-2">
+                            Copyright © 2024.
                         </div>
-                        <div className="items-list">
-                            <Link to="/">Home</Link>
-                            <Link to="/Aboutus">About</Link>
-                            <Link to="/Blog">Blog</Link>
-                            <Link to="/Services">Services</Link>
-                            <Link to="/contactUs">Contact</Link>
-                        </div>
-                    </motion.div>
-                    <motion.div className="utilities"
-                        initial={{opacity:0,y:110}}
-                        whileInView={{opacity:1,y:0}}
-                        viewport={{once:true}}
-                        transition={{duration:0.7,ease:"easeOut"}}>
-                    </motion.div>
-                 
+                    </div>
+
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 
