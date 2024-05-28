@@ -11,11 +11,14 @@ const Footer = () => {
                     <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                         {/* First Column */}
                         <div className="space-y-4 pt-1">
-                            <img
-                                src="/static/images/lulu.png"  // Updated path here
-                                alt="Lulu Image"
-                                className="w-40 h-20 rounded-full object-cover mb-1"
-                            /><div className="max-w-md pr-14 text-md text-gray-200 mt-[-20px]">
+                            <a href="/">
+                                <img
+                                    src="/static/images/lulu.png"  // Updated path here
+                                    alt="Lulu Image"
+                                    className="w-40 h-20 rounded-full object-cover mb-1"
+                                />
+                            </a>
+                            <div className="max-w-md pr-14 text-md text-gray-200 mt-[-20px]">
                                 Focus on a digital marketing niche to elevate your agency. Tailor services for industry-specific needs, apply deep expertise, and drive growth. Specialization sets you apart, ensuring client satisfaction.
                             </div>
                             <div className="flex space-x-2">
@@ -60,7 +63,7 @@ const Footer = () => {
                                 </a>
                             </div>
                         </div>
-                        
+
                         {/* Second Column */}
                         <div className="mt-16 grid grid-cols-2 gap-2 xl:col-span-2 xl:mt-0 ">
                             <div className="md:grid md:grid-cols-2 md:gap-8">

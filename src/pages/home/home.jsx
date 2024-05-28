@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import soboImage from '../../assets/homeimages/sobo.png';
-import abouticon from "../../assets/homeimages/abouticon.png"
-import abouticon2 from "../../assets/homeimages/abouticon2.png"
 import ladder from "../../assets/homeimages/ladder.png"
 import charts from "../../assets/homeimages/charts.png"
 import graphics from "../../assets/homeimages/Graphics.png"
@@ -13,6 +11,7 @@ import Header from "../../components/header/header"
 import "./home.css"
 import Footer from "../../components/footer/footer";
 import { useNavigate } from 'react-router-dom';
+
 
 
 // Why use this concept?
@@ -56,15 +55,17 @@ function Home() {
 
                     </div>
                     <div className="banner-image" style={{ overflow: 'hidden' }}>
-                        <motion.img
-                            src='./static/images/Blue Clay Hovering Geometry Pack.png'
-                            className="monitor"
-                            alt=""
-                            whileHover={{ scale: 1.1, rotate: 180 }}
-                            transition={{ duration: 1.5 }}
-                        />
-
-                    </div>
+    <motion.img
+        src='./static/images/Blue Clay Hovering Geometry Pack.png'
+        className="monitor"
+        alt=""
+        whileHover={{ scale: 3.0, rotate: 1000 }}
+        whileTap={{ scale: 2.8, rotate: 1000 }} // Apply animation for touch devices
+        initial={{ scale: 1, rotate: 360 }} // Initial state
+        animate={{ scale: 1, rotate: 360 }} // Animation to apply
+        transition={{ duration: 2.5 }}
+    />
+</div>
                 </div>
             </header>
             <ServicesContainer />
