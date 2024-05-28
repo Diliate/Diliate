@@ -1,6 +1,5 @@
 import React from "react"
 import {motion} from "framer-motion"
-
 import rocket from "../../assets/services-images/cta ship.png"
 import star from "../../assets/services-images/cta star.png"
 import polygon from "../../assets/services-images/Polygon 1.png"

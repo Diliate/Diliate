@@ -1,6 +1,6 @@
 .home-services {
     background: var(--secondary-01);
-    padding-top: 60px;
+    padding-top: 10px;
     padding-bottom: 60px;
 }
 
@@ -88,7 +88,7 @@
 } */
 @media (min-width:480px) {
         .home-services{
-            padding: 90px 0;
+            padding: 10px 0;
         }
         .services-title {
             margin: auto;

@@ -77,52 +77,34 @@ function Home() {
                     <img className="about-image" src='./static/images/s2.jpg' loading="lazy" />
                 </motion.div>
                 <div className="about-container">
-                    <motion.div
-                        style={{ position: "relative", zIndex: "1" }}
-                        initial={{ opacity: 0, y: 110 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7, ease: "easeOut" }}>
-                        <div className="about-sub">
-                            <div>
-
-                            </div>
-                            <div className="about-title">
-                                <div></div>
-                                <p className="about-info"><span></span></p>
-                                <h2>Your Trusted Digital Partner</h2>
-                            </div>
-                        </div>
-                        <div style={{ width: '100%', border: '1px solid #cfcfcf' }}></div>
-                        <p className="about-text">We're a leading digital services provider, dedicated to enhancing businesses through innovative technology solutions. Our expertise spans across web development, SEO optimization, and social media marketing, designed to elevate your online presence and drive growth.</p>
-                    </motion.div>
-                    <div className="about-point">
-
-                        <motion.div className="points"
-                            initial={{ opacity: 0, x: "25%" }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7, ease: "easeOut" }}>
-                            <img src={abouticon} loading="lazy" alt="About Icon" />
-                            <div className="point-container">
-                                <h3 className="point-header">Guaranteed Results</h3>
-                                <p className="point-text">Crafting delightful experiences, one project at a time.</p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div className="points second"
-                            initial={{ opacity: 0, x: "25%" }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7, ease: "easeOut" }}>
-                            <img src={abouticon2} loading="lazy" alt="" />
-                            <div className="point-container">
-                                <h3 className="point-header">Expert Team</h3>
-                                <p className="point-text">Guided by industry leaders, your success is our passion.</p>
-                            </div>
-                        </motion.div>
+            <motion.div
+                style={{ position: "relative", zIndex: "1" }}
+                initial={{ opacity: 0, y: 110 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+            >
+                <div className="about-sub">
+                    <div></div>
+                    <div className="about-title">
+                        <div></div>
+                        <p className="about-info"><span></span></p>
+                        <h2 className="font-orbitron text-4xl">Your Trusted Digital Partner</h2>
                     </div>
                 </div>
+                <hr className="adjustable-line" />
+<div className="about-text-container">
+<hr className="adjustable-line" />
+<p className="about-text text-lg mt-4">Welcome to Diliate – where we turn digital dreams into decentralized reality!</p>
+    <p className="about-text montserrat-font text-lg mt-4"> we're your go-to squad for webDev, Seo, CM, GoogleAds . We'll make your online presence hotter than a Delhi summer.</p>
+    <p className="about-text montserrat-font text-lg mt-4">Why Us? We're not your average tech nerds – we're the Jedi masters of the Digital marketing .Let's soar to new heights together!</p>
+    <p className="about-text montserrat-font text-lg mt-4">Slide into our DMs like you're making a smooth UPI transaction .</p>
+
+
+</div>
+
+            </motion.div>
+        </div>
             </div>
             <div className="home-process">
                 <Header spantext="PROCESS" image={ladder} content="Streamlined Digital Process" light={false} />
