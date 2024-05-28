@@ -55,16 +55,18 @@ function Home() {
 
                     </div>
                     <div className="banner-image" style={{ overflow: 'hidden' }}>
-    <motion.img
-        src='./static/images/Blue Clay Hovering Geometry Pack.png'
-        className="monitor"
-        alt=""
-        whileHover={{ scale: 3.0, rotate: 1000 }}
-        whileTap={{ scale: 2.8, rotate: 1000 }} // Apply animation for touch devices
-        initial={{ scale: 1, rotate: 360 }} // Initial state
-        animate={{ scale: 1, rotate: 360 }} // Animation to apply
-        transition={{ duration: 2.5 }}
-    />
+                    <motion.img
+    src='./static/images/Blue Clay Hovering Geometry Pack.png'
+    className="monitor"
+    alt=""
+    whileHover={{ scale: 1.3, rotate: 0 }} // Scale up on hover
+    whileTap={{ scale: 1.3, rotate: 0 }} // Scale up on tap
+    initial={{ scale: 1.8, rotate: 0 }} // Initial state
+    animate={{ scale: 1.3, rotate: 360 }} // Animation to apply (rotate by 360 degrees)
+    transition={{ duration: 1.9 }} // Transition duration
+/>
+
+
 </div>
                 </div>
             </header>
