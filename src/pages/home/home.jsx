@@ -40,8 +40,7 @@ function Home() {
 
                 <div className="banner">
                     <div className="banner-content">
-
-                        <h1 style={{ margin: '0px' }} className="banner-text">A Fully Integrated Digital
+                    <h1 style={{ margin: '0px' }} className="banner-text">A Fully Integrated Digital
                             <span style={{ color: '#5956e8' }}> Marketing </span>Agency
                         </h1>
                         <p style={{ margin: '0px' }} className='dummy-text'>We understand our customer's needs and hence our work approach & systems
@@ -59,12 +58,14 @@ function Home() {
     src='./static/images/Blue Clay Hovering Geometry Pack.png'
     className="monitor"
     alt=""
-    whileHover={{ scale: 1.3, rotate: 0 }} // Scale up on hover
-    whileTap={{ scale: 1.3, rotate: 0 }} // Scale up on tap
-    initial={{ scale: 1.8, rotate: 0 }} // Initial state
+    whileHover={{ scale: 1, rotate: 60 }} // Scale up on hover
+    whileTap={{ scale: 1, rotate: 0 }} // Scale up on tap
+    initial={{ scale: 1, rotate: 180 }} // Initial state
     animate={{ scale: 1.3, rotate: 360 }} // Animation to apply (rotate by 360 degrees)
-    transition={{ duration: 1.9 }} // Transition duration
+    transition={{ duration: 2 }} // Transition duration
 />
+
+
 
 
 </div>

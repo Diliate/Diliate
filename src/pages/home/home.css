@@ -107,9 +107,10 @@ body {
 
 
 .monitor{
-    position: relative;
-    width: 100%;
-    height: auto;
+    max-width: 100%; /* Limit the image width to its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper rendering as a block element */
+    margin: 0 auto; /* Center the image horizontally */
 }
 
 .check{
@@ -372,7 +373,8 @@ body {
         width: 50%;
     }
     .monitor{
-        width:100%;
+        width:90%;
+        height: auto;
     }
     .about-title h2{
         font-size: 35px;
