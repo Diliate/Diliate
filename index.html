@@ -5,66 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Diliate</title>
-    <link rel="icon"  href="favicon.ico" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans" />
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito|Noto+Sans|Orbitron:wght@400;700&display=swap">
+
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Calendly Widget -->
+    <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 
     <!-- Meta Pixel Code -->
+    <script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
     <script>
-     !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
+        !function(f,b,e,v,n,t,s) {
+            if(f.fbq) return; n=f.fbq=function() { n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments) };
+            if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0'; n.queue=[]; t=b.createElement(e); t.async=!0;
+            t.src=v; s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)
+        }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '475563661655417');
         fbq('track', 'PageView');
     </script>
-    <!-- End Meta Pixel Code -->
-   
+
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NXSGXS7T');</script>
-    <!-- End Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NXSGXS7T"></script>
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[]; w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer' ? '&l='+l : '';
+            j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NXSGXS7T');
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJGK43H5X1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-KJGK43H5X1');
+    </script>
 </head>
 <body>
+    <div id="root"></div>
+
+    <!-- Overlay Style -->
     <style>
         #overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-          z-index: 9999; /* High z-index to ensure it's above other content */
-          overflow-x: hidden;
-          overflow-y: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            overflow: hidden;
         }
-      </style>
-    <!-- Calendly badge widget begin -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/diliate38/30min', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: undefined }); }</script>
-    <!-- Calendly badge widget end -->
+    </style>
+
+    <!-- Calendly Badge Widget -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script>
+        window.onload = function() {
+            Calendly.initBadgeWidget({
+                url: 'https://calendly.com/diliate38/30min',
+                text: 'Schedule time with me',
+                color: '#0069ff',
+                textColor: '#ffffff'
+            });
+        }
+    </script>
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXSGXS7T"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXSGXS7T" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
 
-    <div id="root"></div>
+    <!-- Facebook Pixel Tracking Image -->
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=475563661655417&ev=PageView&noscript=1"/>
+    </noscript>
+
     <script type="module" src="/src/main.jsx"></script>
-    
-    <!-- Moved noscript for Facebook Pixel tracking image to the body -->
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=475563661655417&ev=PageView&noscript=1"
-    /></noscript>
 </body>
 </html>
