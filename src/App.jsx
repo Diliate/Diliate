@@ -7,6 +7,7 @@ import { logEvent } from "firebase/analytics";
 import Book from "./pages/Book/book";
 import Preloader from "./components/Preloader/Preloader";
 import MetaPixel from "./utils/google-analytics'/Meta/metapixel";
+import FullPageComponent from "./components/services-component/FullPageComponent";
 
 // Dynamically import components using React.lazy
 const Home = React.lazy(() => import("./pages/home/home"));
@@ -51,6 +52,7 @@ function App() {
               <Route path="/contactus" element={<ContactUs isOpen={isContactUsOpen} onClose={toggleContactUsVisibility} />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/:id" element={<FullPageComponent />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/book" element={<Book />} />

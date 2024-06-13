@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./services-container.css"
 
-import ServicesGrid from "../../components/services-component/services-grid"
+import ServicesGrid from "./services-grid"
 import papa from '../../assets/services-images/papa.jpg';
 import e4 from '../../assets/services-images/e4.jpg';
 import b2 from '../../assets/services-images/b2.jpg';
@@ -27,64 +27,76 @@ const ServicesContainer = ()=>{
                 <div className="services-content">
                 <ServicesGrid 
     image={e4} 
-    sub='Social Media Marketing' 
+    sub='Social Media Marketing'
+    id={0} 
     text={
       <>
         Boost online presence
         <span style={{display: 'block'}}>Engage with target audience</span>
         <span style={{display: 'block'}}>Increase website visits</span>
       </>
-    }/>
+    }
+    />
 <ServicesGrid 
     image={b2} 
-    sub='Paid Advertising' 
+    sub='Paid Advertising'
+    id={1} 
     text={
       <>
         Focus on interested buyers
         <span style={{display: 'block'}}>Maximize ad ROI</span>
         <span style={{display: 'block'}}>Expand customer base</span>
       </>
-    }/>
+    }
+   />
 <ServicesGrid 
     image={b3} 
     sub='Advanced Analytics' 
+    id={2}
     text={
       <>
         Insights for better decisions
         <span style={{display: 'block'}}>Spot growth opportunities</span>
         <span style={{display: 'block'}}>Tailor strategies to customer needs</span>
       </>
-    }/>
+    }
+    />
 <ServicesGrid 
     image={burger} 
-    sub='SEO Optimization' 
+    sub='SEO Optimization'
+    id={3} 
     text={
       <>
         Higher search rankings
         <span style={{display: 'block'}}>Organic traffic boost</span>
         <span style={{display: 'block'}}>Strengthen brand reputation</span>
       </>
-    }/>
+    }
+    />
 <ServicesGrid 
     image={e1} 
     sub='Content Marketing' 
+    id={4}
     text={
       <>
         Informative & engaging content
         <span style={{display: 'block'}}>Grow audience loyalty</span>
         <span style={{display: 'block'}}>Convert visitors into customers</span>
       </>
-    }/>
+    }
+    />
 <ServicesGrid 
     image={papa} 
-    sub='Website Development' 
+    sub='Website Development'
+    id={5} 
     text={
       <>
         Customized online solutions
         <span style={{display: 'block'}}>Seamless e-commerce integration</span>
         <span style={{display: 'block'}}>User-friendly design for better engagement</span>
       </>
-    }/>
+    }
+    />
                 </div>
             </div>
         </div>
