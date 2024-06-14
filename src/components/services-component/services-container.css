@@ -4,26 +4,35 @@
     padding-bottom: 60px;
 }
 
+.home-services {
+    background: var(--secondary-01);
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
 
 .service-image {
     margin-top: 20px; /* Adjust the value as needed */
-  }
-  .service-title {
-    text-align: center;
+}
+
+.service-title {
+    text-align: left; /* Align title to the left */
     font-weight: bold;
     font-size: 2rem; /* Adjust the size as needed */
     margin-top: 20px; /* Add some top margin if needed */
-  }
-  
-  .service-content {
+}
+
+.service-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-    
-
-
-
+    align-items: flex-start; /* Align content to the left */
+    text-align: left; /* Align text content to the left */
+    max-width: 800px; /* Limit content width if needed */
+    margin: 0 auto; /* Center content horizontally if necessary */
+    padding: 2rem; /* Add padding around content */
+    background: #fff; /* White background for service content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+    border-radius: 10px; /* Rounded corners for a softer look */
+}
 
 .services-heading {
     max-width: 1400px;
@@ -31,16 +40,17 @@
     margin-bottom: 40px;
 }
 
-.info-div{
+.info-div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Align text content to the left */
 }
 
 .services-title {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align items to the left */
     gap: 12px;
     font-weight: 500;
     overflow: hidden;
@@ -48,7 +58,7 @@
 
 .title-sub {
     margin-top: 20px;
-    text-align: center;
+    text-align: left; /* Align subtitle to the left */
     font-family: 'Noto Sans';
     letter-spacing: 0.135em;
 }
@@ -57,7 +67,7 @@
     font-size: 30px;
     font-weight: 600;
     line-height: 118.5%;
-    text-align: center;
+    text-align: left; /* Align text to the left */
 }
 
 .services-button {
@@ -119,8 +129,8 @@
             text-align: left;
         }
         .services-button {
-            max-width: 180px;
-            margin: 0;
+            max-width: 780px;
+            margin-left: 4rem;
         }
 }
 
@@ -228,19 +238,21 @@ body, h1, h2, p, ul, li {
     font-size: 1.75rem;
     font-weight: 600;
     color: #444;
-    margin-top: 2rem;
+    margin-top: 2rem; /* Top margin for headings */
+    margin-bottom: 0.6rem; /* Bottom margin for headings */
     text-align: center;
   }
+  
   
   /* Styling the list */
   .service-content ul {
     list-style-type: disc;
-    margin: 1rem 0 1rem 2rem;
-    padding-left: 1rem;
+    margin: 0 0 rem 2rem; /* Adjusted margin to add more space from the bottom */
+    padding-left: 1em;
   }
   
   .service-content ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
   
   /* Links */

@@ -92,7 +92,7 @@ const Footer = () => {
                                             <a href="/Aboutus" className="text-md leading-6 text-gray-300 hover:text-gray-50">About Us</a>
                                         </li>
                                         <li>
-                                            <a href="/services" className="text-md leading-6 text-gray-300 hover:text-gray-50">Service</a>
+                                            <a href="/services" className="text-md leading-6 text-gray-300 hover:text-gray-50">Services</a>
                                         </li>
                                         <li>
                                             <a href="/contactus" className="text-md leading-6 text-gray-300 hover:text-gray-50">Contact Us</a>

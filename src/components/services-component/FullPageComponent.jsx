@@ -66,6 +66,9 @@ function FullPageComponent() {
           <Banner text={service.title} first="#FFFA76" second="#E326AE" third="#ffc4bb" />
         </div>
       </header>
+
+
+      
       <div className="service-content">
         <img src={service.image} alt={service.title} className="service-image" />
         <h1 className="service-title">{service.title}</h1>
@@ -113,16 +116,7 @@ function FullPageComponent() {
             <h2>{webDevelopmentContent.getStarted.title}</h2>
             <p>{webDevelopmentContent.getStarted.description}</p>
             <p>{webDevelopmentContent.contact}</p>
-            <button
-      className="bg-white w-36 h-12 rounded-md border-2 border-[#333] cursor-pointer relative group hover:bg-[#333] transition duration-300 ease-in hover:-translate-x-2 hover:translate-y-2"
-      onClick={() => {
-        // Handle redirection to contact page here
-        window.location.href = '/contactus'; // Replace with your actual contact page URL
-      }}
-    >
-      <h1 className="group-hover:text-white text-[#333] font-bold">let's Talk</h1>
-      <div className="rounded-md group-hover:border-0 w-36 h-12 border-2 border-[#333] absolute top-1 -left-2 -z-10"></div>
-    </button>
+           
           </>
 
         )}
@@ -147,15 +141,17 @@ function FullPageComponent() {
           ))}
         </ul>
         <button
-      className="bg-white w-36 h-12 rounded-md border-2 border-[#333] cursor-pointer relative group hover:bg-[#333] transition duration-300 ease-in hover:-translate-x-2 hover:translate-y-2"
-      onClick={() => {
-        // Handle redirection to contact page here
-        window.location.href = '/contactus'; // Replace with your actual contact page URL
-      }}
-    >
-      <h1 className="group-hover:text-white text-[#333] font-bold">let's Talk</h1>
-      <div className="rounded-md group-hover:border-0 w-36 h-12 border-2 border-[#333] absolute top-1 -left-2 -z-10"></div>
-    </button>
+  className="relative bg-white w-36 h-12 rounded-md border-2 border-[#333] cursor-pointer group hover:bg-[#333] transition duration-300 ease-in transform hover:-translate-x-2 hover:translate-y-2"
+  onClick={() => {
+    // Handle redirection to contact page here
+    window.location.href = '/contactus'; // Replace with your actual contact page URL
+  }}
+>
+  <h1 className="group-hover:text-white text-[#333] font-bold">let's Talk</h1>
+  <div className="absolute top-0 left-0 w-full h-full rounded-md border-2 border-[#333] group-hover:border-0"></div>
+</button>
+
+
        
 
         {service.title === 'Social Media Marketing' && (
@@ -175,15 +171,16 @@ function FullPageComponent() {
       ))}
     </ul>
     <button
-      className="bg-white w-36 h-12 rounded-md border-2 border-[#333] cursor-pointer relative group hover:bg-[#333] transition duration-300 ease-in hover:-translate-x-2 hover:translate-y-2"
-      onClick={() => {
-        // Handle redirection to contact page here
-        window.location.href = '/contactus'; // Replace with your actual contact page URL
-      }}
-    >
-      <h1 className="group-hover:text-white text-[#333] font-bold">let's Talk</h1>
-      <div className="rounded-md group-hover:border-0 w-36 h-12 border-2 border-[#333] absolute top-1 -left-2 -z-10"></div>
-    </button>
+  className="relative bg-white w-36 h-12 rounded-md border-2 border-[#333] cursor-pointer group hover:bg-[#333] transition duration-300 ease-in transform hover:-translate-x-2 hover:translate-y-2"
+  onClick={() => {
+    // Handle redirection to contact page here
+    window.location.href = '/contactus'; // Replace with your actual contact page URL
+  }}
+>
+  <h1 className="group-hover:text-white text-[#333] font-bold">let's Talk</h1>
+  <div className="absolute top-0 left-0 w-full h-full rounded-md border-2 border-[#333] group-hover:border-0"></div>
+</button>
+
   </>
 )}
 
