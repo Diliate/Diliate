@@ -29,19 +29,30 @@ function FullPageComponent() {
         {id === "0" ? <ServicesGrid 
     image={e4}
     id={0} 
-    sub="Amplify Your Brand with Diliate's Social Media Marketing"
+    sub="Social Media Marketing"
  
     text={
       <>
-        Boost online presence
-        <span style={{display: 'block', textAlign:'left'}}>In today's digital age, social media is a powerful tool for connecting with your audience and 
-driving engagement. At Diliate, 
-</span>
-        <span style={{display: 'block', textAlign:'left'}}>a leading Digital Marketing Agency, we specialize in Social 
-Media Marketing to help you build your brand, reach your target audience, and achieve your 
-business goals.</span>
+        <b>Amplify Your Brand with Diliate's Social Media Marketing</b>
+        <span style={{display: 'block', textAlign:'left',fontSize:'90%'}}>In today's digital age, social media is a powerful tool for connecting with your audience and 
+        driving engagement. 
+        </span>
+        <span style={{display: 'block', textAlign:'left', fontSize:'90%'}}>At Diliate, a leading Digital Marketing Agency, we specialize in Social 
+        Media Marketing to help you build your brand, reach your target audience, and achieve your 
+        business goals.</span>
+        <br></br>
+        <b>Why Social Media Marketing?</b>
+        <span style={{display: 'block', textAlign:'left', fontSize:'90%'}}>Social Media Marketing is essential for creating brand awareness, fostering customer loyalty, 
+        and driving conversions. It allows you to engage directly with your audience and create 
+        meaningful connections. At Diliate, we craft tailored social media strategies that resonate 
+        with your audience and deliver results.
+        </span>
+
+
       </>
     }
+
+
     presence={false}
     flex={true}
     /> : id === "1" ? <ServicesGrid 
@@ -111,6 +122,11 @@ business goals.</span>
     flex={true}
     /> : null}
     </div>
+
+    <br></br>
+    <br></br>
+
+    
     <Footer/>
     </>
   )
