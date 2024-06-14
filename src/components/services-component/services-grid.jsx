@@ -29,10 +29,7 @@ const ServicesGrid = ({ image, sub, text, id, presence, flex }) => {
               <img className="card-image" src={image} />
             </div>
           )}
-          <div className="card-info">
-            <h3 className="card-sub">{sub}</h3>
-            <p className="card-text">{text}</p>
-          </div>
+         
         </div>
       ) : (
         <div>
