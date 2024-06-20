@@ -71,15 +71,25 @@ const Footer = () => {
                                     <h3 className="text-md font-semibold leading-6 text-white">Our Services</h3>
                                     <ul role="list" className="mt-6 space-y-4">
                                         <li>
-                                            <a href="" className="text-md leading-6 text-gray-300 hover:text-gray-50">Digital Marketing</a>
+                                            <a href="/Services/social-media-marketing" className="text-md leading-6 text-gray-300 hover:text-gray-50">Social Media Marketing</a>
                                         </li>
                                         <li>
-                                            <a href="" className="text-md leading-6 text-gray-300 hover:text-gray-50">Web Development</a>
+                                            <a href="/Services/paid-advertising" className="text-md leading-6 text-gray-300 hover:text-gray-50">Paid Advertising</a>
                                         </li>
                                         <li>
-                                            <a href="" className="text-md leading-6 text-gray-300 hover:text-gray-50">SEO Optimization</a>
+                                            <a href="/Services/advanced-analytics" className="text-md leading-6 text-gray-300 hover:text-gray-50">Advanced Analytics</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Services/seo-optimization" className="text-md leading-6 text-gray-300 hover:text-gray-50">SEO Optimization</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Services/content-marketing" className="text-md leading-6 text-gray-300 hover:text-gray-50">Content Marketing</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Services/website-development" className="text-md leading-6 text-gray-300 hover:text-gray-50">Website Development</a>
                                         </li>
                                     </ul>
+
                                 </div>
                             </div>
                             {/* Third Column */}
