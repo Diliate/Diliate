@@ -77,7 +77,7 @@ const Footer = () => {
                                             <a href="/Services/paid-advertising" className="text-md leading-6 text-gray-300 hover:text-gray-50">Paid Advertising</a>
                                         </li>
                                         <li>
-                                            <a href="/Services/advanced-analytics" className="text-md leading-6 text-gray-300 hover:text-gray-50">Advanced Analytics</a>
+                                            <a href="/services/advanced-analytics" className="text-md leading-6 text-gray-300 hover:text-gray-50">Advanced Analytics</a>
                                         </li>
                                         <li>
                                             <a href="/Services/seo-optimization" className="text-md leading-6 text-gray-300 hover:text-gray-50">SEO Optimization</a>

@@ -6,7 +6,7 @@ import { analytics } from "./firebase/firebase";
 import { logEvent } from "firebase/analytics";
 import Book from "./pages/Book/book";
 import Preloader from "./components/Preloader/Preloader";
-import MetaPixel from "./utils/google-analytics/Meta/metapixel"; // Corrected import path
+import MetaPixel from "./utils/google-analytics'/Meta/metapixel";
 import FullPageComponent from "./components/services-component/FullPageComponent";
 import SocialMediaMarketing from "./components/services-component/SocialMediaMarketing";
 import SEOOptimization from "./components/services-component/SEOOptimization";
@@ -15,8 +15,7 @@ import ContentMarketing from "./components/services-component/ContentMarketing";
 import PaidAdvertising from "./components/services-component/PaidAdvertising";
 import AdvancedAnalytics from "./components/services-component/AdvancedAnalytics";
 import Footer from "./components/footer/footer";
-import SiteMap from "./components/sitemap";
-
+Footer
 // Dynamically import components using React.lazy
 const Home = React.lazy(() => import("./pages/home/home"));
 const AboutUs = React.lazy(() => import("./pages/about/about"));
@@ -49,33 +48,29 @@ function App() {
       {isLoading ? (
         <div id="root" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
           <Preloader />
+          <MetaPixel />
         </div>
       ) : (
         <div id="root" style={{ display: 'block' }}>
-          <MetaPixel />
-          <div className="App">
-            <SiteMap />
-            <Suspense fallback={<Preloader />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/Aboutus" element={<AboutUs />} />
-                <Route path="/contactus" element={<ContactUs isOpen={isContactUsOpen} onClose={toggleContactUsVisibility} />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/services/:id" element={<FullPageComponent />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/book" element={<Book />} />
-                <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
-                <Route path="/services/seo-optimization" element={<SEOOptimization />} />
-                <Route path="/services/website-development" element={<WebsiteDevelopment />} />
-                <Route path="/services/content-marketing" element={<ContentMarketing />} />
-                <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
-                <Route path="/services/advanced-analytics" element={<AdvancedAnalytics />} />
-              </Routes>
-            </Suspense>
-          </div>
-          <Footer />
+          <Suspense fallback={<Preloader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/Aboutus" element={<AboutUs />} />
+              <Route path="/contactus" element={<ContactUs isOpen={isContactUsOpen} onClose={toggleContactUsVisibility} />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/:id" element={<FullPageComponent />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/book" element={<Book />} />
+              <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
+              <Route path="/services/seo-optimization" element={<SEOOptimization />} />
+              <Route path="/services/website-development" element={<WebsiteDevelopment />} />
+              <Route path="/services/content-marketing" element={<ContentMarketing />} />
+              <Route path="/services/paid-advertising" element={<PaidAdvertising />} />
+              <Route path="/services/advanced-analytics"element={<AdvancedAnalytics/>}/>
+            </Routes>
+          </Suspense>
         </div>
       )}
     </>
