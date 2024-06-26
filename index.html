@@ -88,7 +88,7 @@
             font-family: Arial, sans-serif;
             text-decoration: none;
             position: fixed;
-            bottom: 10px;
+            bottom: 80px;
             right: 10px;
             z-index: 1000;
         }
@@ -124,12 +124,12 @@
         function adjustZohoWidgetPosition() {
             var zohoWidget = document.querySelector('.zsiq_floatmain');
             if (zohoWidget) {
-                zohoWidget.style.bottom = '100px'; // Move the widget 100px up
+                zohoWidget.style.bottom = '150px'; // Move the widget 100px up
             }
         }
 
         s.onload = function() {
-            setTimeout(adjustZohoWidgetPosition, 1000); // Wait for 1 second to ensure the widget is fully loaded
+            setTimeout(adjustZohoWidgetPosition, 200); // Wait for 1 second to ensure the widget is fully loaded
         };
     </script>
 
@@ -140,5 +140,29 @@
 
     <!-- React App Script -->
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+        (function (w, d, s, u) {
+        w.gbwawc = {
+        url: u,
+        options: {
+                waId: "+91 7982169989",
+                siteName: "Diliate",
+                siteTag: "Active 1 Minute ago",
+                siteLogo: "https://assets.gallabox.com/gb-home/wa-chat-widget/bot+avatars/2.png",
+                widgetPosition: "RIGHT",
+                triggerMessage: "Hey! Need Help? We\'re Here! 💬",
+                welcomeMessage: "Hey there! Welcome to Diliate! 🌟 Ready to turbocharge your success? Chat with us and let\'s make awesome things happen!",
+                brandColor: "#25D366",
+                messageText: "How can we help you today with your buisness needs?",
+                replyOptions: ['I need help with SEO ','I need Website Development assistance','I need SEO Optimization services'],
+            },
+        };
+        var h = d.getElementsByTagName(s)[0],
+        j = d.createElement(s);
+        j.async = true;
+        j.src = u + "/whatsapp-widget.min.js?_=" + Math.random();
+        h.parentNode.insertBefore(j, h);
+        })(window, document, "script", "https://waw.gallabox.com");
+    </script>
 </body>
 </html>
