@@ -112,6 +112,18 @@
             values: {},
             ready: function() {}
         };
+    
+        // Inject initial CSS to position the widget on the left
+        var css = '.zsiq_floatmain { bottom: 50px !important; left: 10px !important; right: auto !important; }';
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+        document.head.appendChild(style);
+    
         var d = document;
         var s = d.createElement("script");
         s.type = "text/javascript";
@@ -120,18 +132,22 @@
         s.src = "https://salesiq.zoho.in/widget";
         var t = d.getElementsByTagName("script")[0];
         t.parentNode.insertBefore(s, t);
-
+    
         function adjustZohoWidgetPosition() {
             var zohoWidget = document.querySelector('.zsiq_floatmain');
             if (zohoWidget) {
-                zohoWidget.style.bottom = '150px'; // Move the widget 100px up
+                zohoWidget.style.bottom = '100px'; // Move the widget 100px up
+                zohoWidget.style.left = '10px';   // Move the widget to the left side
+                zohoWidget.style.right = 'auto';  // Ensure the right property is unset
             }
         }
-
+    
         s.onload = function() {
-            setTimeout(adjustZohoWidgetPosition, 1000); // Wait for 1 second to ensure the widget is fully loaded
+            // Re-adjust after a delay to ensure the widget is fully loaded
+            setTimeout(adjustZohoWidgetPosition, 1000);
         };
     </script>
+    
 
     <!-- Facebook Pixel Tracking Image -->
     <noscript>
