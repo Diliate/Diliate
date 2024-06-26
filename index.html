@@ -76,19 +76,29 @@
             overflow: hidden;
         }
     </style>
-
-    <!-- Calendly Badge Widget -->
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <script>
-        window.onload = function() {
-            Calendly.initBadgeWidget({
-                url: 'https://calendly.com/diliate38/30min',
-                text: 'Schedule time with me',
-                color: '#0069ff',
-                textColor: '#ffffff'
-            });
+ <style>
+        /* Custom styling for the badge */
+        #outlook-badge {
+            display: inline-block;
+            background-color: #0069ff;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            text-decoration: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 1000;
         }
-    </script>
+        #outlook-badge:hover {
+            background-color: #0056cc;
+        }
+    </style>
+    <a id="outlook-badge" href="https://outlook.office365.com/owa/calendar/Diliate1@Diliate.onmicrosoft.com/bookings/" target="_blank">Schedule time with me</a>
+
 
     <!-- Google Tag Manager (noscript) -->
     <noscript>
