@@ -5,23 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="5LUrO8bOD1XXFYbXAMZDQhyEDygF9rJMuqtQ_mMOCuU" />
-
-    <title>Diliate</title>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.diliate.com/">
+    <meta property="og:title" content="Diliate - Your Digital Marketing Partner">
+    <meta property="og:description" content="Diliate offers expert digital marketing solutions to boost your online presence. Contact us today to elevate your business strategy.">
+    <meta name="description" content="Diliate offers expert digital marketing solutions to boost your online presence. Contact us today to elevate your business strategy.">
+    <title>Diliate - Your Digital Marketing Partner</title>
+    <meta property="og:url" content="https://www.diliate.com/">
+    <meta property="og:image" content="https://www.diliate.com/images/logo.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://x.com/Diliate_Digital">
+    <meta name="twitter:title" content="Diliate - Your Digital Marketing Partner">
+    <meta name="twitter:description" content="Diliate offers expert digital marketing solutions to boost your online presence. Contact us today to elevate your business strategy.">
+    <meta name="twitter:image" content="https://www.diliate.com/images/logo.png">
     <link rel="icon" href="favicon.ico">
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito|Noto+Sans|Orbitron:wght@400;700&display=swap">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- Calendly Widget -->
     <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 
     <!-- Meta Pixel Code -->
-    <script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
     <script>
         !function(f,b,e,v,n,t,s) {
             if(f.fbq) return; n=f.fbq=function() { n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments) };
@@ -33,7 +42,6 @@
     </script>
 
     <!-- Google Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NXSGXS7T"></script>
     <script>
         (function(w,d,s,l,i){
             w[l]=w[l]||[]; w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
@@ -43,18 +51,13 @@
     </script>
 
     <!-- Google Analytics -->
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YGSFEPV0QK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YGSFEPV0QK');
-</script>
-
-
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YGSFEPV0QK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YGSFEPV0QK');
+    </script>
 
 </head>
 <body>
@@ -92,7 +95,8 @@
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXSGXS7T" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
 
-    <script type="text/javascript">
+    <!-- Zoho SalesIQ -->
+    <script>
         var $zoho = $zoho || {};
         $zoho.salesiq = $zoho.salesiq || {
             widgetcode: "siq13a2ba93bd906dddbb301ac235df1e6f74cf2ca14c1a4bb1c2654bb30cae0d08",
@@ -107,26 +111,25 @@
         s.src = "https://salesiq.zoho.in/widget";
         var t = d.getElementsByTagName("script")[0];
         t.parentNode.insertBefore(s, t);
-    
-        // Function to adjust the position of the Zoho SalesIQ widget
+
         function adjustZohoWidgetPosition() {
             var zohoWidget = document.querySelector('.zsiq_floatmain');
             if (zohoWidget) {
-                zohoWidget.style.bottom = '100px'; // Move the widget 30px up
+                zohoWidget.style.bottom = '100px'; // Move the widget 100px up
             }
         }
-    
-        // Adjust the position of the widget after it is loaded
+
         s.onload = function() {
-            setTimeout(adjustZohoWidgetPosition, 1000); // Wait for 3 seconds to ensure the widget is fully loaded
+            setTimeout(adjustZohoWidgetPosition, 1000); // Wait for 1 second to ensure the widget is fully loaded
         };
     </script>
-    
+
     <!-- Facebook Pixel Tracking Image -->
     <noscript>
         <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=475563661655417&ev=PageView&noscript=1"/>
     </noscript>
 
+    <!-- React App Script -->
     <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
