@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdbootstrap/react-testimonial-slider": "^1.0.0",
     "firebase": "^10.12.2",
     "framer-motion": "^11.2.11",
     "react": "^18.3.1",

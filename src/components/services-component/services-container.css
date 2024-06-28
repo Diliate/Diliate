@@ -1,9 +1,14 @@
-.home-services {
-    background: var(--secondary-01);
-    padding-top: 10px;
-    padding-bottom: 60px;
+.home-services { 
+margin-top: 2rem;
 }
 
+.navbar {
+    background: linear-gradient(111.23deg, #CFD4FF 9.95%, #FFFFFD 85.17%);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 .home-services {
     background: var(--secondary-01);
     padding-top: 10px;
@@ -108,9 +113,7 @@
     gap: 30px;
 }
 
-/* .menu-wrapper{
-    height: 0;
-} */
+
 @media (min-width:480px) {
         .home-services{
             padding: 10px 0;

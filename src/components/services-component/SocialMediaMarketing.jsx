@@ -9,17 +9,8 @@ import socialMediaContent from './socialMediaContent';
 const SocialMediaMarketing = () => {
   return (
     <>
-      <header
-        className="services-hero"
-        style={{
-          background: 'linear-gradient(111.23deg, #CFD4FF 9.95%, #FFFFFD 85.17%)',
-        }}
-      >
         <Nav page="services" />
-        <div className="banner-container">
-          <Banner text="Social Media Marketing" first="#FFFA76" second="#E326AE" third="#ffc4bb" />
-        </div>
-      </header>
+        
 
       <div className="service-content">
         <img src={e4} alt="Social Media Marketing" className="service-image" />

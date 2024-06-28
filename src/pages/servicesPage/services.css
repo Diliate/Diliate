@@ -10,7 +10,13 @@
     border-radius: 15px;
     background: linear-gradient(111.05deg, #E9F7FF 9.66%, #FFDBD5 57.52%, #FFF3CA 103.42%);
 }
-
+.navbar {
+    background: linear-gradient(111.23deg, #CFD4FF 9.95%, #FFFFFD 85.17%);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 body {
     overflow-y: auto; /* Changed to allow scrolling */
 }

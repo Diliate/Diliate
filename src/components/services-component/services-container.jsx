@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import "./services-container.css"
+import "./services-container.css";
 
-import ServicesGrid from "./services-grid"
+import ServicesGrid from "./services-grid";
 import papa from '../../assets/services-images/papa.jpg';
 import e4 from '../../assets/services-images/e4.jpg';
 import b2 from '../../assets/services-images/b2.jpg';
@@ -54,12 +54,9 @@ const ServicesContainer = () => {
   return (
     <div className="home-services">
       <div className="wrapper">
-        <ServicesHeading
-          titletext="High-impact digital services to take your business to the next level"
-          spantext=""
-          buttontext="Our Services"
-          light={true}
-        />
+        <div className="text-center my-10">
+          <h2 className="text-3xl font-bold text-white ">OUR SERVICES</h2>
+        </div>
         <div className="services-content">
           {serviceData.map((service, index) => (
             <ServicesGrid 
@@ -91,18 +88,24 @@ export const ServicesHeading = ({ titletext, image, buttontext, spantext, light 
       transition={{ duration: 0.7, ease: "easeOut" }}>
       <div className="services-title">
         <div className="info-div">
-          <img src={image} loading='lazy' />
+          {image && <img src={image} loading='lazy' alt="Service Heading" />}
           <div className="title">
-            <p className="title-sub" style={light ? { color: "#d0d0d0" } : { color: "#292930" }}> <span style={light ? { color: "#ffdc60" } : { color: "#5956e8" }}></span> {spantext}</p>
+            {spantext && (
+              <p className="title-sub" style={light ? { color: "#d0d0d0" } : { color: "#292930" }}>
+                <span style={light ? { color: "#ffdc60" } : { color: "#5956e8" }}>{spantext}</span>
+              </p>
+            )}
             <h2 className="title-text" style={light ? { color: "#fff" } : { color: "#292930" }}>{titletext}</h2>
           </div>
         </div>
-        <Link to="#" className={`services-button ${light ? "light" : "dark"}`}>
-          <div>{buttontext}</div>
-        </Link>
+        {buttontext && (
+          <Link to="#" className={`services-button ${light ? "light" : "dark"}`}>
+            <div>{buttontext}</div>
+          </Link>
+        )}
       </div>
     </motion.div>
-  )
+  );
 };
 
 export default ServicesContainer;

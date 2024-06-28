@@ -19,6 +19,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    background: linear-gradient(111.23deg, #FFFFFD 85.17%);
+
 }
 
 /* Apply similar overflow control to any container that might expand beyond the viewport */
@@ -39,6 +41,7 @@ body {
     max-width: 1200px;
     padding-top: 2%;
     z-index: 3;
+
 }
 
 .navbody{
@@ -48,6 +51,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .logo{
@@ -75,7 +79,6 @@ body {
 
 
 .menu-wrapper{
-    height: 400px;
     position:-ms-page;
     overflow: hidden;
     width: 100vw;

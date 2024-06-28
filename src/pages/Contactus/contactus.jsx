@@ -50,13 +50,46 @@ function ContactUs() {
 
     return (
         <div>
-            <header className="services-hero" style={{ background: "linear-gradient(111.23deg, #F5E9FF 9.95%, #FFDBD5 85.17%)" }}>
                 <Nav page="contact" />
-                <div className="banner-container">
-                    <Banner text="Contact" bluetext="us" first="#FFFA76" second="#E326AE" third="#ffc4bb" />
+               
+                <section class="py-10 bg-white sm:py-16 lg:py-24">
+    <div class="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Frequently Asked Questions</h2>
+
+        <div class="flow-root mt-12 sm:mt-16">
+            <div class="divide-y divide-gray-200 -my-9">
+                <div class="py-9">
+                    <p class="text-xl font-semibold text-black">How do I create an account with Diliate?</p>
+                    <p class="mt-3 text-base text-gray-600">Creating an account with Diliate is simple. Click on the "Get Started" button on our homepage, fill in your details, and you'll be ready to leverage our digital marketing services in no time.</p>
+                    <p class="mt-3 text-base text-gray-600">If you encounter any issues during the process, our support team is here to help. Feel free to reach out to us for assistance.</p>
                 </div>
-            </header>
-           
+
+                <div class="py-9">
+                    <p class="text-xl font-semibold text-black">What payment methods do you support?</p>
+                    <p class="mt-3 text-base text-gray-600">At Diliate, we support a variety of payment methods to ensure convenience for our clients. You can pay using credit cards, debit cards, and online payment gateways such as PayPal and Stripe.</p>
+                    <p class="mt-3 text-base text-gray-600">For more information about our payment options, please visit our Payment Methods page or contact our support team.</p>
+                </div>
+
+                <div class="py-9">
+                    <p class="text-xl font-semibold text-black">How can I track the progress of my marketing campaigns?</p>
+                    <p class="mt-3 text-base text-gray-600">Diliate provides detailed reporting and analytics for all your marketing campaigns. You can log in to your account dashboard to view real-time data and insights.</p>
+                    <p class="mt-3 text-base text-gray-600">Our team also provides regular updates and performance reviews to ensure you are always informed about the progress of your campaigns.</p>
+                </div>
+
+                <div class="py-9">
+                    <p class="text-xl font-semibold text-black">How do you provide support?</p>
+                    <p class="mt-3 text-base text-gray-600">
+                        At Diliate, we prioritize our clients' needs. Our support team is available 24/7 to assist you with any queries or issues. You can reach us via email at <a href="mailto:support@diliate.com" class="text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline">info@diliate.com</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 
             <section class="bg-white dark:bg-gray-900">
     <div class="container px-6 py-12 mx-auto">

@@ -11,17 +11,9 @@ import './services-container.css';
 const WebsiteDevelopment = () => {
   return (
     <>
-      <header
-        className="services-hero"
-        style={{
-          background: 'linear-gradient(111.23deg, #CFD4FF 9.95%, #FFFFFD 85.17%)',
-        }}
-      >
+     
         <Nav page="services" />
-        <div className="banner-container">
           <Banner text="Website Development" first="#FFFA76" second="#E326AE" third="#ffc4bb" />
-        </div>
-      </header>
 
       <div className="service-content">
         <img src={e4} alt="Website Development" className="service-image" />

@@ -29,7 +29,7 @@ function Nav({ page }) {
 					{Show ? <i style={{ backgroundColor: `#5956e8` }} class="bi fw-bold p-2 rounded bi-x-lg"></i> : <i style={{ backgroundColor: `#5956e8` }} className="bi	 rounded  p-2 fw-bold bi-list"></i>}
 				</div>
 			</div>
-			<div className='menu-wrapper'>
+			<div className='menute'>
 				<nav className={`menu ${Show ? 'open' : 'close'}`}>
 					<Link to='/'>Home</Link>
 					<Link to='/Aboutus'>About</Link>

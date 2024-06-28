@@ -6,12 +6,11 @@ import charts from "../../assets/homeimages/charts.png"
 import graphics from "../../assets/homeimages/Graphics.png"
 import notification from "../../assets/homeimages/notification.png"
 import Nav from "../../components/navigation/navigation"
-import ServicesContainer from "../../components/services-component/services-container"
 import Header from "../../components/header/header"
 import "./home.css"
 import Footer from "../../components/footer/footer";
 import { useNavigate } from 'react-router-dom';
-
+import TestimonialsSection from "../../components/Testinomial/TestimonialsSection";
 
 
 // Why use this concept?
@@ -40,7 +39,7 @@ function Home() {
 
                 <div className="banner">
                     <div className="banner-content">
-                    <h1 style={{ margin: '0px' }} className="banner-text">A Fully Integrated Digital
+                        <h1 style={{ margin: '0px' }} className="banner-text">A Fully Integrated Digital
                             <span style={{ color: '#5956e8' }}> Marketing </span>Agency
                         </h1>
                         <p style={{ margin: '0px' }} className='dummy-text'>We understand our customer's needs and hence our work approach & systems
@@ -54,24 +53,19 @@ function Home() {
 
                     </div>
                     <div className="banner-image" style={{ overflow: 'hidden' }}>
-                    <motion.img
-    src='./static/images/Blue Clay Hovering Geometry Pack.png'
-    className="monitor"
-    alt=""
-    whileHover={{ scale: 1, rotate: 60 }} // Scale up on hover
-    whileTap={{ scale: 1, rotate: 0 }} // Scale up on tap
-    initial={{ scale: 1, rotate: 180 }} // Initial state
-    animate={{ scale: 1.3, rotate: 360 }} // Animation to apply (rotate by 360 degrees)
-    transition={{ duration: 2 }} // Transition duration
-/>
-
-
-
-
-</div>
+                        <motion.img
+                            src='./static/images/Blue Clay Hovering Geometry Pack.png'
+                            className="monitor"
+                            alt=""
+                            whileHover={{ scale: 1, rotate: 60 }} // Scale up on hover
+                            whileTap={{ scale: 1, rotate: 0 }} // Scale up on tap
+                            initial={{ scale: 1, rotate: 180 }} // Initial state
+                            animate={{ scale: 1.3, rotate: 360 }} // Animation to apply (rotate by 360 degrees)
+                            transition={{ duration: 2 }} // Transition duration
+                        />
+                    </div>
                 </div>
             </header>
-            <ServicesContainer />
             <div className="home-about">
                 <motion.div className="about-image-container"
                     initial={{ opacity: 0, y: 110 }}
@@ -81,35 +75,167 @@ function Home() {
                     <img className="about-image" src='./static/images/s2.jpg' loading="lazy" />
                 </motion.div>
                 <div className="about-container">
-            <motion.div
-                style={{ position: "relative", zIndex: "1" }}
-                initial={{ opacity: 0, y: 110 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
-            >
-                <div className="about-sub">
-                    <div></div>
-                    <div className="about-title">
-                        <div></div>
-                        <p className="about-info"><span></span></p>
-                        <h2 className="font-orbitron text-4xl">Your Trusted Digital Partner</h2>
+                    <motion.div
+                        style={{ position: "relative", zIndex: "1" }}
+                        initial={{ opacity: 0, y: 110 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7, ease: "easeOut" }}
+                    >
+                        <div className="about-sub">
+                            <div></div>
+                            <div className="about-title">
+                                <div></div>
+                                <p className="about-info"><span></span></p>
+                                <h2 className="font-orbitron text-4xl">Your Trusted Digital Partner</h2>
+                            </div>
+                        </div>
+                        <hr className="adjustable-line" />
+                        <div className="about-text-container">
+                            <hr className="adjustable-line" />
+                            <p className="about-text text-lg mt-4">Welcome to Diliate – where we turn digital dreams into decentralized reality!</p>
+                            <p className="about-text montserrat-font text-lg mt-4"> we're your go-to squad for webDev, Seo, CM, GoogleAds . We'll make your online presence hotter than a Delhi summer.</p>
+                            <p className="about-text montserrat-font text-lg mt-4">Why Us? We're not your average tech nerds – we're the Jedi masters of the Digital marketing .Let's soar to new heights together!</p>
+                            <p className="about-text montserrat-font text-lg mt-4">Slide into our DMs like you're making a smooth UPI transaction .</p>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+            <section class="py-10  sm:py-16 lg:py-24">
+                <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="text-2xl font-bold text-gray-800 sm:text-4xl sm:leading-tight">
+                            Trusted by world class companies, design teams & popular designers
+                        </h2>
+                    </div>
+
+                    <div class="mt-12 md:mt-20">
+                        <div class="flex justify-center items-center mx-auto max-w-4xl bg-gray-50 rounded-3xl p-8">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-16">
+                                <div class="flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-6"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-1.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-8"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-2.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-8"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-3.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-7"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-4.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="hidden md:flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-8"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-5.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="hidden md:flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-8"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-6.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="hidden md:flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-8"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-7.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="hidden md:flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-8"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-8.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="hidden md:flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-8"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-9.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="hidden md:flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-7"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-10.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="hidden md:flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-8"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-11.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="hidden md:flex justify-center">
+                                    <img
+                                        class="object-contain w-full h-8"
+                                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/3/logo-12.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <hr className="adjustable-line" />
-<div className="about-text-container">
-<hr className="adjustable-line" />
-<p className="about-text text-lg mt-4">Welcome to Diliate – where we turn digital dreams into decentralized reality!</p>
-    <p className="about-text montserrat-font text-lg mt-4"> we're your go-to squad for webDev, Seo, CM, GoogleAds . We'll make your online presence hotter than a Delhi summer.</p>
-    <p className="about-text montserrat-font text-lg mt-4">Why Us? We're not your average tech nerds – we're the Jedi masters of the Digital marketing .Let's soar to new heights together!</p>
-    <p className="about-text montserrat-font text-lg mt-4">Slide into our DMs like you're making a smooth UPI transaction .</p>
+            </section>
 
+          
+          
 
-</div>
-
-            </motion.div>
+            <section class="py-10 bg-white sm:py-16 lg:py-24">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="grid items-center grid-cols-1 lg:grid-cols-2 gap-x-12 xl:gap-x-24 gap-y-12">
+      <div class="relative lg:mb-12">
+        <img class="absolute -right-0 -bottom-8 xl:-bottom-12 xl:-right-4" src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/dots-pattern.svg" alt="" />
+        <div class="pl-12 pr-6">
+          <img class="relative rounded-3xl" src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/girl-working-on-laptop.jpg" alt="" />
         </div>
+        <div class="absolute left-0 pr-12 bottom-8 xl:bottom-20">
+          <div class="max-w-xs bg-blue-600 rounded-lg sm:max-w-md xl:max-w-md">
+            <div class="px-3 py-4 sm:px-5 sm:py-8">
+              <div class="flex items-start">
+                <p class="text-3xl sm:text-4xl">👋</p>
+                <blockquote class="ml-5">
+                  <p class="text-sm font-medium text-white sm:text-lg">They made it so simple. My new site is so much faster and easier to work with than my old site.</p>
+                </blockquote>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="2xl:pl-16">
+        <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">We make things easy for projects at DILIATE.</h2>
+        <p class="text-xl leading-relaxed text-gray-900 mt-9">At Diliate , we ensure that your projects run smoothly and efficiently. Our solutions are designed to streamline processes and enhance productivity.</p>
+        <p class="mt-6 text-xl leading-relaxed text-gray-900">Our team of experts is dedicated to providing top-notch service and support, ensuring that your goals are met with ease and precision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
             <div className="home-process">
                 <Header spantext="PROCESS" image={ladder} content="Streamlined Digital Process" light={false} />
                 <div className="illustrations">
@@ -148,6 +274,7 @@ function Home() {
                     </motion.div>
                 </div>
             </div>
+            <TestimonialsSection />
             <div className="text-[#fff] pb-[2rem] lg:w-[90%] max-w-[1200px] m-auto px-6 md:px-10 mt-[3rem]">
                 <div className="relative">
                     <motion.img

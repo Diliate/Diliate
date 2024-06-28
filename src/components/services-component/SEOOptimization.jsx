@@ -10,18 +10,9 @@ import './services-container.css';
 const SEOOptimization = () => {
   return (
     <>
-      <header
-        className="services-hero"
-        style={{
-          background: 'linear-gradient(111.23deg, #CFD4FF 9.95%, #FFFFFD 85.17%)',
-        }}
-      >
+     
         <Nav page="services" />
-        <div className="banner-container">
-          <Banner text="SEO Optimization" first="#FFFA76" second="#E326AE" third="#ffc4bb" />
-        </div>
-      </header>
-
+       
       <div className="service-content">
         <img src={e1} alt="SEO Optimization" className="service-image" />
         <h1 className="service-title">SEO Optimization</h1>

@@ -9,9 +9,7 @@ const ContactBox = ( {buttontext,image,title,text} ) =>{
         <>
       <style>
         {`
-            .menu-wrapper{
-                height: 0;
-            }
+            
         `}
       </style>
         <motion.div className="contact-card"

@@ -4,7 +4,6 @@ import rocket from "../../assets/services-images/cta ship.png"
 import star from "../../assets/services-images/cta star.png"
 import polygon from "../../assets/services-images/Polygon 1.png"
 import bullseye from "../../assets/homeimages/Pattern.png"
-import Banner from "../../components/banner/banner"
 import Nav from "../../components/navigation/navigation"
 import ServicesContainer from "../../components/services-component/services-container"
 import Footer from "../../components/footer/footer"
@@ -14,20 +13,11 @@ import { Link } from "react-router-dom"
 function Services() {
     return (
         <>
-            <style>
-                {`
-            .menu-wrapper{
-                height: 0;
-            }
-        `}
-            </style>
+            
             <div>
-                <header className="services-hero" style={{ background: "linear-gradient(111.23deg, #CFD4FF 9.95%, #FFFFFD 85.17%)" }}>
-                    <Nav page="services" />
-                    <div className="banner-container">
-                        <Banner text="Services" first="#FFFA76" second="#E326AE" third="#ffc4bb" />
-                    </div>
-                </header>
+
+                <Nav  page="services" />
+
                 <ServicesContainer />
                 <div className="services-cta">
                     <motion.div className="services-cta-title"
