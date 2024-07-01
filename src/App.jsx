@@ -14,8 +14,12 @@ import WebsiteDevelopment from "./components/services-component/WebsiteDevelopme
 import ContentMarketing from "./components/services-component/ContentMarketing";
 import PaidAdvertising from "./components/services-component/PaidAdvertising";
 import AdvancedAnalytics from "./components/services-component/AdvancedAnalytics";
-import Footer from "./components/footer/footer";
-Footer
+import MetaTags from "./components/MetaTags/MetaTags";
+import SeoOptimization from "./pages/SeoOptimization/SeoOptimizations";
+import SeoOptimizations from "./pages/SeoOptimization/SeoOptimizations";
+import SocialMediaMarketings from "./pages/SocialMediaMarketing/SocialMediaMarketings";
+import WebsiteDevelopments from "./pages/WebsiteDevelopment/WebsiteDevelopments";
+
 // Dynamically import components using React.lazy
 const Home = React.lazy(() => import("./pages/home/home"));
 const AboutUs = React.lazy(() => import("./pages/about/about"));
@@ -49,6 +53,10 @@ function App() {
         <div id="root" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
           <Preloader />
           <MetaPixel />
+          <SeoOptimizations/>
+          <SocialMediaMarketings/>
+          <WebsiteDevelopments/>
+
         </div>
       ) : (
         <div id="root" style={{ display: 'block' }}>
@@ -71,6 +79,8 @@ function App() {
               <Route path="/services/advanced-analytics"element={<AdvancedAnalytics/>}/>
             </Routes>
           </Suspense>
+          <MetaPixel />
+          <MetaTags/>
         </div>
       )}
     </>
