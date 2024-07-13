@@ -150,17 +150,15 @@ body {
 .home-about {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    max-width: 1000px;
-    width: 90%;
+    margin-top: 10px;
+    max-width: 100000px;
     position: relative;
     align-items: center;
     background: radial-gradient(125% 125% at 50% 10%, rgba(var(--bs-body-bg-rgb), 1) 40%, rgba(var(--bs-body-color-rgb), 1) 100%);
     border-radius: 20px;
     box-shadow: -5px -5px 30px 4px rgba(0, 0, 0, 0.1), 10px 10px 30px 4px rgba(45, 78, 255, 0.15);
-    padding: 30px;
+    padding: 5px;
     z-index: 1;
-    margin-left: 24px;
 }
 
 .about-image-container {
@@ -183,7 +181,8 @@ body {
     flex: 1;
     width: 94%;
     overflow: hidden;
-    margin-bottom: 0px;
+    margin-bottom: 100px;
+    margin-right: 6rem;
 }
 
 .about-sub {
@@ -508,7 +507,7 @@ body {
 
     .about-container {
         width: 70%;
-        margin-bottom: 105px;
+        margin-bottom: 205px;
     }
 
     .about-title h2 {
@@ -548,20 +547,19 @@ body {
 
 @media (min-width: 1280px) {
     .home-about {
-        width: 86%;
         flex-direction: row;
         margin: auto;
-        margin-top: 23px;
+        margin-top: 10px;
     }
 
     .about-image-container,
     .about-container {
         width: 50%;
-        margin-top: 5px;
+        margin-top: 3px;
     }
 
     .about-image {
-        width: 90%;
+        width: 65%;
     }
 
     .about-sub {
@@ -747,5 +745,6 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
+
 
 
