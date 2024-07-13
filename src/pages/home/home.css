@@ -182,7 +182,6 @@ body {
     width: 94%;
     overflow: hidden;
     margin-bottom: 100px;
-    margin-right: 6rem;
 }
 
 .about-sub {
@@ -508,6 +507,7 @@ body {
     .about-container {
         width: 70%;
         margin-bottom: 205px;
+        margin-right: 6rem;
     }
 
     .about-title h2 {
