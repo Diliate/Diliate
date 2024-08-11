@@ -1,199 +1,64 @@
-
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-
-
-
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    background: linear-gradient(111.23deg, #FFFFFD 85.17%);
-
-}
-
-/* Apply similar overflow control to any container that might expand beyond the viewport */
-.container {
-    overflow-x: hidden;
-}
-
-
-
-
-
-.navigation-small{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    gap: 20px;
-    max-width: 1200px;
-    padding-top: 2%;
-    z-index: 3;
-
-}
-
-.navbody{
-    width:90%;
-    height: 75px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.logo{
-    width:50%;
-    height: 95px;
-}
-
-.logo-image{
-    height: 180%;
+.nav-header {
+    background-color: #000;
+  }
+  
+  .logo img {
+    height: 50px; /* Updated height for better UI practice */
     width: auto;
-    padding-bottom: 3rem;
-
-}
-
-.menu-button{
- 
-}
-
-.first-line,.second-line,.third-line{
-    width: 100%;
-    height: 3px;
-    background-color: var(--secondary-03);
-}
- 
-
-
-.menu-wrapper{
-    position:-ms-page;
-    overflow: hidden;
-    width: 100vw;
-    top: 6rem;
-}
-
-.menu{
-    box-sizing: border-box;
-    position: absolute;
-    width: 100%;
-    background-color:white;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 18px;
-    padding: 30px 0 40px 20px;
-    font-weight: 500;
-    margin-top: 0px;  
-    transform: translateY(0);
-    transition: all 0.3s ease-out; 
-}
-
-.menu a{
-    margin-left: 10px;
-}
-
-.menu.open{
-    transform: translateY(0);
-}
-
-.menu.close{
-    transform: translateY(-440px);
-}
-
-
-
-
-
-
-
-
-
-.menu-large {
+    max-width: 150px; /* Ensure the logo does not stretch too wide */
+  }
+  
+  nav a {
+    color: #ccc;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #fff;
+  }
+  
+  .md\\:hidden {
     display: none;
-}
-
-a{
-    text-decoration: none;
-    color: var(--secondary-01);
-    transition: all 0.3s;
-}
-
-a:hover{
-    color: var(--primary-02);
-}
-
-@media (min-width:480px) {
-    .menu-button {
-        height: 22px;
-        padding:20px 15px;
-        padding-bottom: 15px;
+  }
+  
+  @media (min-width: 768px) {
+    .md\\:hidden {
+      display: flex;
     }
-    .first-line,.second-line,.third-line{
-        width: 80%;
-        height: 4px;
-        gap: 4px;
+  }
+  
+  @media (max-width: 767px) {
+    .md\\:hidden {
+      display: none;
     }
-    .menu{
-        padding-left: 36px;
-        gap:23px;
+  
+    .nav-header {
+      padding: 0.5rem 1rem;
     }
-    .menu-wrapper{
-        height: 480px;
-        overflow: hidden;;
-    }
-}
-
-@media (min-width:768px){
-    .menu {
-        padding-left: 36px;
-        gap: 25px;
-    }
-}
-
-@media (min-width:990px) {
-    .menu-button,.menu,.menu-wrapper {
-        display: none;
-        overflow: hidden;
-    }
-    .navigation-small {
-        width: 90%;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0px;
-    }
-    .menu-large{
-        display: flex;
-        width:59%;
-        font-size: 18px;
-        font-weight: 500;   
-        justify-content:space-between;
-        align-items: center;
-        min-width: 490px;
-    }  
-    .navbody{
-        width: 25%;
-        height: 81px;
-        margin: 0px;
-    }
-    .logo{
-        width: 100%;
-        height: 100%;
-    }
-    .get-started-button{
-        padding: 17px 20px 17px;
-    }
-}
+  }
+  
+  .menu-wrapper {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .menu-button {
+    cursor: pointer;
+  }
+  
+  .bg-black {
+    background-color: #000;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  .text-blue-500 {
+    color: #3b82f6;
+  }
+  
+  .text-gray-400 {
+    color: #9ca3af;
+  }
+  

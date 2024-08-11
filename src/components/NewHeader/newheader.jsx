@@ -1,106 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
-const ServicesMenu = () => {
-  return (
-    <Menu>
-      <MenuButton className="inline-flex items-center gap-2 rounded-md bg-transparent py-1.5 px-3 text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
-        Services
-        <ChevronDownIcon className="h-5 w-5 text-gray-400 hover:text-white" />
-      </MenuButton>
-      <MenuItems className="w-52 origin-top-right rounded-xl border border-white/5 bg-gray-800 p-1 text-sm text-white shadow-lg focus:outline-none">
-        <MenuItem>
-          {({ active }) => (
-            <Link
-              to="/services"
-              className={`${
-                active ? 'bg-gray-700' : ''
-              } group flex w-full items-center gap-2 rounded-lg py-1.5 px-3`}
-            >
-              All Services
-            </Link>
-          )}
-        </MenuItem>
-        <MenuItem>
-          {({ active }) => (
-            <Link
-              to="/services/social-media-marketing"
-              className={`${
-                active ? 'bg-gray-700' : ''
-              } group flex w-full items-center gap-2 rounded-lg py-1.5 px-3`}
-            >
-              Social Media Marketing
-            </Link>
-          )}
-        </MenuItem>
-        <MenuItem>
-          {({ active }) => (
-            <Link
-              to="/services/paid-advertising"
-              className={`${
-                active ? 'bg-gray-700' : ''
-              } group flex w-full items-center gap-2 rounded-lg py-1.5 px-3`}
-            >
-              Paid Advertising
-            </Link>
-          )}
-        </MenuItem>
-        <MenuItem>
-          {({ active }) => (
-            <Link
-              to="/services/advanced-analytics"
-              className={`${
-                active ? 'bg-gray-700' : ''
-              } group flex w-full items-center gap-2 rounded-lg py-1.5 px-3`}
-            >
-              Advanced Analytics
-            </Link>
-          )}
-        </MenuItem>
-        <MenuItem>
-          {({ active }) => (
-            <Link
-              to="/services/seo-optimization"
-              className={`${
-                active ? 'bg-gray-700' : ''
-              } group flex w-full items-center gap-2 rounded-lg py-1.5 px-3`}
-            >
-              SEO Optimization
-            </Link>
-          )}
-        </MenuItem>
-        <MenuItem>
-          {({ active }) => (
-            <Link
-              to="/services/content-marketing"
-              className={`${
-                active ? 'bg-gray-700' : ''
-              } group flex w-full items-center gap-2 rounded-lg py-1.5 px-3`}
-            >
-              Content Marketing
-            </Link>
-          )}
-        </MenuItem>
-        <MenuItem>
-          {({ active }) => (
-            <Link
-              to="/services/website-development"
-              className={`${
-                active ? 'bg-gray-700' : ''
-              } group flex w-full items-center gap-2 rounded-lg py-1.5 px-3`}
-            >
-              Website Development
-            </Link>
-          )}
-        </MenuItem>
-      </MenuItems>
-    </Menu>
-  );
-};
+const SERVICES = [
+  { path: '/services', label: 'All Services' },
+  { path: '/services/social-media-marketing', label: 'Social Media Marketing' },
+  { path: '/services/paid-advertising', label: 'Paid Advertising' },
+  { path: '/services/advanced-analytics', label: 'Advanced Analytics' },
+  { path: '/services/seo-optimization', label: 'SEO Optimization' },
+  { path: '/services/content-marketing', label: 'Content Marketing' },
+  { path: '/services/website-development', label: 'Website Development' },
+];
 
-const NewHeader = () => {
+// Services Menu Component
+const ServicesMenu = memo(() => (
+  <Menu as="div" className="relative z-50"> 
+    <MenuButton className="inline-flex items-center gap-2 rounded-md bg-transparent py-1.5 px-3 text-base font-normal text-gray-400 transition-all duration-200 hover:text-white focus:outline-none">
+      Services
+      <ChevronDownIcon className="h-5 w-5 text-gray-400 hover:text-white" />
+    </MenuButton>
+    <MenuItems className="absolute right-0 w-52 origin-top-right rounded-xl border border-white/5 bg-gray-800 p-1 text-sm text-white shadow-lg focus:outline-none">
+      {SERVICES.map(({ path, label }) => (
+        <MenuItem key={path}>
+          {({ active }) => (
+            <Link
+              to={path}
+              className={`${
+                active ? 'bg-gray-700' : ''
+              } group flex w-full items-center gap-2 rounded-lg py-1.5 px-3`}
+            >
+              {label}
+            </Link>
+          )}
+        </MenuItem>
+      ))}
+    </MenuItems>
+  </Menu>
+));
+
+const NewHeader = memo(() => {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -108,40 +47,23 @@ const NewHeader = () => {
       <header className="py-4 bg-black sm:py-6">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <div className="shrink-0">
-            <Link to="/" title="" className="flex">
-  <img
-    src="../static/images/lulu.png" // Path relative to the public directory
-    alt="Dilate Logo"
-    style={{ height: '70px', width: 'auto' }}
-  />
-</Link>
-
-            </div>
+            <Link to="/" title="Dilate Home" className="shrink-0 flex">
+              <img
+                src="../static/images/lulu.png"
+                alt="Dilate Logo"
+                style={{ height: '70px', width: 'auto' }}
+                loading="lazy"
+              />
+            </Link>
 
             <div className="flex md:hidden">
               <button
                 type="button"
                 className="text-white"
-                onClick={() => setExpanded(!expanded)}
+                onClick={() => setExpanded((prev) => !prev)}
                 aria-expanded={expanded}
               >
-                {!expanded ? (
-                  <svg
-                    className="w-7 h-7"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1.5"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                ) : (
+                {expanded ? (
                   <svg
                     className="w-7 h-7"
                     xmlns="http://www.w3.org/2000/svg"
@@ -156,81 +78,53 @@ const NewHeader = () => {
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
+                ) : (
+                  <svg
+                    className="w-7 h-7"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
                 )}
               </button>
             </div>
 
             <nav className="hidden md:flex md:items-center md:justify-end md:space-x-12">
-              <Link
-                to="/"
-                title=""
-                className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
-              >
-                Home
-              </Link>
-              <Link
-                to="/Aboutus"
-                title=""
-                className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
-              >
-                About
-              </Link>
-              <Link
-                to="/Blog"
-                title=""
-                className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
-              >
-                Blog
-              </Link>
+              {['/', '/Aboutus', '/Blog', '/contactus'].map((path, index) => (
+                <Link
+                  key={path}
+                  to={path}
+                  title={['Home', 'About', 'Blog', 'Contact'][index]}
+                  className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+                >
+                  {['Home', 'About', 'Blog', 'Contact'][index]}
+                </Link>
+              ))}
               <ServicesMenu />
-              <Link
-                to="/contactus"
-                title=""
-                className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
-              >
-                Contact
-              </Link>
             </nav>
           </div>
 
           {expanded && (
-            <nav>
+            <nav className="md:hidden">
               <div className="flex flex-col pt-8 pb-4 space-y-6">
-                <Link
-                  to="/"
-                  title=""
-                  className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
-                >
-                  Home
-                </Link>
-                <Link
-                  to="/Aboutus"
-                  title=""
-                  className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
-                >
-                  About
-                </Link>
-                <Link
-                  to="/Blog"
-                  title=""
-                  className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
-                >
-                  Blog
-                </Link>
-                <Link
-                  to="/services"
-                  title=""
-                  className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
-                >
-                  Services
-                </Link>
-                <Link
-                  to="/contactus"
-                  title=""
-                  className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
-                >
-                  Contact
-                </Link>
+                {['/', '/Aboutus', '/Blog', '/services', '/contactus'].map((path, index) => (
+                  <Link
+                    key={path}
+                    to={path}
+                    title={['Home', 'About', 'Blog', 'Services', 'Contact'][index]}
+                    className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+                  >
+                    {['Home', 'About', 'Blog', 'Services', 'Contact'][index]}
+                  </Link>
+                ))}
               </div>
             </nav>
           )}
@@ -251,30 +145,27 @@ const NewHeader = () => {
                 Agency
               </h1>
               <p className="max-w-lg mt-4 text-xl font-normal text-gray-400 sm:mt-8">
-                We understand our customer's needs and hence our work approach
-                & systems will tend to know many things about the project
-                result.
+                We understand our customer's needs and hence our work approach & systems will tend to know many things about the project result.
               </p>
               <div className="relative inline-flex items-center justify-center mt-8 sm:mt-12 group">
                 <div className="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"></div>
                 <Link
                   to="/login"
-                  title=""
                   className="relative inline-flex items-center justify-center px-8 py-3 text-base font-normal text-white bg-black border border-transparent rounded-full"
                   role="button"
+                  title="Get Started"
                 >
                   Get Started
                 </Link>
                 <Link
                   to="/services"
-                  title=""
                   className="relative inline-flex items-center justify-center px-8 py-3 text-base font-normal text-white bg-black border border-transparent rounded-full ml-4"
                   role="button"
+                  title="Services"
                 >
                   Services
                 </Link>
               </div>
-
               <div>
                 <div className="inline-flex items-center pt-4 mt-4 border-t border-gray-800 sm:pt-4 sm:mt-4"></div>
               </div>
@@ -284,7 +175,8 @@ const NewHeader = () => {
               <img
                 className="w-full max-w-xs mx-auto lg:max-w-lg xl:max-w-xl"
                 src="https://landingfoliocom.imgix.net/store/collection/dusk/images/hero/1/3d-illustration.png"
-                alt="3D Illustration"
+                alt="3D Illustration of Digital Marketing"
+                loading="lazy"
               />
             </div>
           </div>
@@ -292,6 +184,6 @@ const NewHeader = () => {
       </section>
     </div>
   );
-};
+});
 
 export default NewHeader;

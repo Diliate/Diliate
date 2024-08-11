@@ -1,16 +1,15 @@
-import React, { useState } from "react"
-
-import file from "../../assets/blogimages/Icon (1).png"
-import socials3 from "../../assets/blogimages/socials.jpg"
-import Nav from "../../components/navigation/navigation"
-import Banner from "../../components/banner/banner"
-import Header from "../../components/header/header"
-import Article from "../../components/article/article"
-import Subscribe from "../../components/subscribe/subscribe"
-import BlogCard from "../../components/blog card/blogcard"
-import Footer from "../../components/footer/footer"
-import "./blog.css"
-import { Link } from "react-router-dom"
+import React, { useState, useCallback, useMemo } from "react";
+import { Link } from "react-router-dom";
+import file from "../../assets/blogimages/Icon (1).png";
+import socials3 from "../../assets/blogimages/socials.jpg";
+import Nav from "../../components/navigation/navigation";
+import Banner from "../../components/banner/banner";
+import Header from "../../components/header/header";
+import Article from "../../components/article/article";
+import Subscribe from "../../components/subscribe/subscribe";
+import BlogCard from "../../components/blog card/blogcard";
+import Footer from "../../components/footer/footer";
+import "./blog.css";
 
 const blogs = [
     {
@@ -39,55 +38,55 @@ const blogs = [
     }
 ];
 
+function Blog() {
+    const [value, setValue] = useState("all");
 
-function Blog(){
+    const handleFilter = useCallback((val) => {
+        setValue(val);
+    }, []);
 
-    const [display, setdisplay]=useState(blogs)
-    const [value,setvalue]=useState("all")
-
-    const handleFilter = (val) =>{
-        if(val==="all"){
-            setdisplay(blogs)
-            return
+    const filteredBlogs = useMemo(() => {
+        if (value === "all") {
+            return blogs;
         }
-        const newarray=blogs.filter((blog,i)=>blog.filters===val)
-        setdisplay(newarray)
-    }
-
-    const handleValue = (val) =>{
-        setvalue(val)
-    }
+        return blogs.filter((blog) => blog.filters === value);
+    }, [value]);
 
     return (
-        <div>   
-                <Nav page="blog"/>
-              
-            <div className="blog-section">
-                <Header image={file} light={false} spantext="ARTICLES" content="Browse our content on digital marketing growth"/>
-                <Article image={socials3} date="MARCH 10, 2023" title="The best 4 types of Marketing Strategies For Small Businesses" background="#FFF3CA" reverse={false}/>
-            </div>
-            <Subscribe/>
-            <div className="blog-container">
-                <div className="blog-controls">
+        <div>
+            <Nav page="blog" />
+            <section className="blog-section">
+                <Header image={file} light={false} spantext="ARTICLES" content="Browse our content on digital marketing growth" />
+                <Article image={socials3} date="MARCH 10, 2023" title="The best 4 types of Marketing Strategies For Small Businesses" background="#FFF3CA" reverse={false} />
+            </section>
+            <Subscribe />
+            <section className="blog-container">
+                <nav className="blog-controls">
                     <div className="latest-posts">
-                          <h2>Latest Posts</h2>
-                    </div>                 
-                    <div className="blog-controls-buttons">
-                        <Link to="#" className={`blog-controls-button all-button ${value==="all"?"current":""}`} onClick={()=>{handleFilter("all"); handleValue("all")}}>All</Link>
-                        <Link to="#" className={`blog-controls-button ${value==="growth"?"current":""}`} onClick={()=>{handleFilter("growth"); handleValue("growth")}}>Growth</Link>
-                        <Link to="#" className={`blog-controls-button ${value==="content"?"current":""}`} onClick={()=>{handleFilter("content"); handleValue("content")}}>Content</Link>
-                        <Link to="#" className={`blog-controls-button ${value==="social media"?"current":""}`} onClick={()=>{handleFilter("social media"); handleValue("social media")}}>Social Media</Link>
+                        <h2>Latest Posts</h2>
                     </div>
-                </div>
+                    <div className="blog-controls-buttons">
+                        {["all", "growth", "content", "social media"].map((filter) => (
+                            <Link
+                                key={filter}
+                                to="#"
+                                className={`blog-controls-button ${value === filter ? "current" : ""}`}
+                                onClick={() => handleFilter(filter)}
+                            >
+                                {filter.charAt(0).toUpperCase() + filter.slice(1)}
+                            </Link>
+                        ))}
+                    </div>
+                </nav>
                 <div className="blog-card-container">
-                  {display.map((item,i)=>{
-                    return <BlogCard key={i} image={item.image} buttontext={item.filters} title={item.title} link={item.link} />
-                  })}
+                    {filteredBlogs.map((item, i) => (
+                        <BlogCard key={i} image={item.image} buttontext={item.filters} title={item.title} link={item.link} />
+                    ))}
                 </div>
-            </div>
-            <Footer/>
+            </section>
+            <Footer />
         </div>
-    )
+    );
 }
 
-export default Blog
+export default React.memo(Blog);
