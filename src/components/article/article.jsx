@@ -28,7 +28,7 @@ const Article=({image,date,title,background,reverse})=>{
                 <Link to="https://blog.hubspot.com/marketing/small-business-marketing-guide" target="_blank" rel="noopener noreferrer">
                 <p>View More</p>
               <img src={vector} style={{ width: "14px", height: "14px" }} alt="arrow" />
-</Link>
+                </Link>
                 </div>
             </div>
         </motion.div>

@@ -13,11 +13,8 @@ import { Link } from "react-router-dom"
 function Services() {
     return (
         <>
-            
             <div>
-
-                <Nav  page="services" />
-
+                <Nav page="services" />
                 <ServicesContainer />
                 <div className="services-cta">
                     <motion.div className="services-cta-title"
@@ -35,7 +32,6 @@ function Services() {
                         <div className="services-cta-getintouch">
                             <Link to="/contactUS">Get In Touch</Link>
                         </div>
-
                     </motion.div>
                     <div className="services-cta-circle">
                         <div className="cta-circle-bg"></div>

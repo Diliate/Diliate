@@ -7,11 +7,6 @@ import "./contactbox.css"
 const ContactBox = ( {buttontext,image,title,text} ) =>{
     return (
         <>
-      <style>
-        {`
-            
-        `}
-      </style>
         <motion.div className="contact-card"
             initial={{opacity:0,y:110}}
             whileInView={{opacity:1,y:0}}
