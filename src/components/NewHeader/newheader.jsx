@@ -1,21 +1,21 @@
-import React, { useState, memo } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import React, { useState, memo } from "react";
+import { Link } from "react-router-dom";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const SERVICES = [
-  { path: '/services', label: 'All Services' },
-  { path: '/services/social-media-marketing', label: 'Social Media Marketing' },
-  { path: '/services/paid-advertising', label: 'Paid Advertising' },
-  { path: '/services/advanced-analytics', label: 'Advanced Analytics' },
-  { path: '/services/seo-optimization', label: 'SEO Optimization' },
-  { path: '/services/content-marketing', label: 'Content Marketing' },
-  { path: '/services/website-development', label: 'Website Development' },
+  { path: "/services", label: "All Services" },
+  { path: "/services/social-media-marketing", label: "Social Media Marketing" },
+  { path: "/services/paid-advertising", label: "Paid Advertising" },
+  { path: "/services/advanced-analytics", label: "Advanced Analytics" },
+  { path: "/services/seo-optimization", label: "SEO Optimization" },
+  { path: "/services/content-marketing", label: "Content Marketing" },
+  { path: "/services/website-development", label: "Website Development" },
 ];
 
 // Services Menu Component
 const ServicesMenu = memo(() => (
-  <Menu as="div" className="relative z-50"> 
+  <Menu as="div" className="relative z-50">
     <MenuButton className="inline-flex items-center gap-2 rounded-md bg-transparent py-1.5 px-3 text-base font-normal text-gray-400 transition-all duration-200 hover:text-white focus:outline-none">
       Services
       <ChevronDownIcon className="h-5 w-5 text-gray-400 hover:text-white" />
@@ -27,7 +27,7 @@ const ServicesMenu = memo(() => (
             <Link
               to={path}
               className={`${
-                active ? 'bg-gray-700' : ''
+                active ? "bg-gray-700" : ""
               } group flex w-full items-center gap-2 rounded-lg py-1.5 px-3`}
             >
               {label}
@@ -51,7 +51,7 @@ const NewHeader = memo(() => {
               <img
                 src="../static/images/lulu.png"
                 alt="Dilate Logo"
-                style={{ height: '70px', width: 'auto' }}
+                style={{ height: "70px", width: "auto" }}
                 loading="lazy"
               />
             </Link>
@@ -98,14 +98,14 @@ const NewHeader = memo(() => {
             </div>
 
             <nav className="hidden md:flex md:items-center md:justify-end md:space-x-12">
-              {['/', '/Aboutus', '/Blog', '/contactus'].map((path, index) => (
+              {["/", "/Aboutus", "/Blog", "/contactus"].map((path, index) => (
                 <Link
                   key={path}
                   to={path}
-                  title={['Home', 'About', 'Blog', 'Contact'][index]}
+                  title={["Home", "About", "Blog", "Contact"][index]}
                   className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
                 >
-                  {['Home', 'About', 'Blog', 'Contact'][index]}
+                  {["Home", "About", "Blog", "Contact"][index]}
                 </Link>
               ))}
               <ServicesMenu />
@@ -115,16 +115,20 @@ const NewHeader = memo(() => {
           {expanded && (
             <nav className="md:hidden">
               <div className="flex flex-col pt-8 pb-4 space-y-6">
-                {['/', '/Aboutus', '/Blog', '/services', '/contactus'].map((path, index) => (
-                  <Link
-                    key={path}
-                    to={path}
-                    title={['Home', 'About', 'Blog', 'Services', 'Contact'][index]}
-                    className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
-                  >
-                    {['Home', 'About', 'Blog', 'Services', 'Contact'][index]}
-                  </Link>
-                ))}
+                {["/", "/Aboutus", "/Blog", "/services", "/contactus"].map(
+                  (path, index) => (
+                    <Link
+                      key={path}
+                      to={path}
+                      title={
+                        ["Home", "About", "Blog", "Services", "Contact"][index]
+                      }
+                      className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+                    >
+                      {["Home", "About", "Blog", "Services", "Contact"][index]}
+                    </Link>
+                  )
+                )}
               </div>
             </nav>
           )}
@@ -141,17 +145,17 @@ const NewHeader = memo(() => {
               <h1 className="mt-6 text-4xl font-normal text-white sm:mt-10 sm:text-5xl lg:text-6xl xl:text-8xl">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">
                   Marketing
-                </span>{' '}
+                </span>{" "}
                 Agency
               </h1>
               <p className="max-w-lg mt-4 text-xl font-normal text-gray-400 sm:mt-8">
-                We understand our customer's needs and hence our work approach & systems will tend to know many things about the project result.
+                We understand our customer's needs and hence our work approach &
+                systems will tend to know many things about the project result.
               </p>
               <div className="relative inline-flex items-center justify-center mt-8 sm:mt-12 group">
-                <div className="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"></div>
                 <Link
                   to="/login"
-                  className="relative inline-flex items-center justify-center px-8 py-3 text-base font-normal text-white bg-black border border-transparent rounded-full"
+                  className="relative inline-flex items-center justify-center px-8 py-3 text-base font-normal text-white bg-black border border-transparent rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500"
                   role="button"
                   title="Get Started"
                 >
@@ -159,7 +163,7 @@ const NewHeader = memo(() => {
                 </Link>
                 <Link
                   to="/services"
-                  className="relative inline-flex items-center justify-center px-8 py-3 text-base font-normal text-white bg-black border border-transparent rounded-full ml-4"
+                  className="relative inline-flex items-center justify-center px-8 py-3 text-base font-normal text-white bg-black border border-transparent rounded-full ml-2 bg-gradient-to-r from-cyan-500 to-purple-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500"
                   role="button"
                   title="Services"
                 >
